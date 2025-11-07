@@ -1,31 +1,94 @@
 /*
-																	Water Resources Management using PostgreSQL and PgAdmin4
-																				Area of Interest (South America)
+																	 				Bolivia Watch Geoportal
+																			  THE STOCKHOLM ENVIRONMENT INSTITUTE (SEI)
 															 					 Developed by MSc Carlos Mendez
 																														 
-MOST TABLES AND DATASETS USED:
+Index of Data and Shapefiles:
 
-1. South America Countries and Boundary 
-2. HydroSHEDS (Conditioned DEM)
-3. HydroBASINS (Level 1,2,3,4,5,6,7,8,9,10,11 and 12)
-4. HydroRIVERS
-5. HydroLAKES
-6. Global Lakes and Wetlands Database (GLWD)
-7. HydroWASTE
-8. Global River Classification (GloRiC)
-9. Lake TEMP
-10. Global Power Plant Database (GPPD)
-11. Firt Level Administrative Units (FLAU)
-12. Second Level Administrative Units (SLAU)
+"Abril_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Abril_BWII_BH_QA.shp" 
+"Agosto_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Agosto_BWII_BH_QA.shp" 
+"Calibracion_BWII_BH_IA.shp" 
+"Capital_municipal_BWII_BH_IA.shp" 
+"Caudal_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Caudal_especifico_BWII_BH_CESP.shp" 
+"Cobertura_BWII_Clima_BH.shp" 
+"corto_plazo_precipitacion_BW_Cambio_PPT_Sequia.shp" 
+"corto_plazo_precipitacion_BW_Proyeccion_P.shp" 
+"corto_plazo_temperatura_BW_Cambio_T_Sequia.shp" 
+"Country_border_BW_ENSO.shp" 
+"Diciembre_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Diciembre_BWII_BH_QA.shp" 
+"DJF_BW_Indice_Combinado_1.shp" 
+"Enero_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Enero_BWII_BH_QA.shp" 
+"Escorrentia_BWII_BH_ESCT.shp" 
+"Evapotranspiracion_BWII_BH_PPT.shp" 
+"eventos_sequia_agrometeorologica_BW_Cambio_SPEI.shp" 
+"eventos_sequia_agrometeorologica_Extrema_BW_Cambio_SPEI.shp" 
+"eventos_sequia_agrometeorologica_Leve_BW_Cambio_SPEI.shp" 
+"eventos_sequia_agrometeorologica_Moderada_BW_Cambio_SPEI.shp" 
+"eventos_sequia_agrometeorologica_Severa_BW_Cambio_SPEI.shp" 
+"Febrero_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Febrero_BWII_BH_QA.shp" 
+"Humedad_BWII_Clima_BH.shp" 
+"Indice_de_aridez_BWII_BH_IA.shp" 
+"Indice_de_aridez_BWII_BH_PPT.shp" 
+"Indices_BW_ENSO.shp" 
+"JJA_BW_Indice_Combinado_1.shp" 
+"Julio_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Julio_BWII_BH_QA.shp" 
+"Junio_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Junio_BWII_BH_QA.shp" 
+"Lago_BWII_BH_IA.shp" 
+"Lagos_BWII_BH_QA.shp" 
+"Limite_municipal_BWII_Clima_BH.shp" 
+"Limite_nacional_BWII_BH_IA.shp" 
+"Limites_internacionales_BWII_Clima_BH.shp" 
+"Macrocuencas_BWII_BH_IA.shp" 
+"Macrocuencas_BWII_BH_IA2.shp" 
+"MAM_BW_Indice_Combinado_1.shp" 
+"Marzo_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Marzo_BWII_BH_QA.shp" 
+"Mayo_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Mayo_BWII_BH_QA.shp" "Media_BWII_BH_QA.shp" 
+"mediano_plazo_precipitacion_BW_Cambio_PPT_Sequia.shp" 
+"mediano_plazo_precipitacion_BW_Proyeccion_P.shp" 
+"mediano_plazo_temperatura_BW_Cambio_T_Sequia_.shp" 
+"Municipios_BW_Indice_Combinado_1.shp" 
+"Noviembre_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Noviembre_BWII_BH_QA.shp" 
+"Nubosidad_BWII_Clima_BH.shp" 
+"Octubre_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Octubre_BWII_BH_QA.shp" 
+"Precipitacion_BWII_BH_PPT.shp" 
+"Precipitacion_BWII_Clima_BH.shp" 
+"Regiones_Hidroclimaticas_BW_ENSO.shp" 
+"Rios_BW_Cambio_PPT_Sequia.shp" 
+"Ríos_BW_Indice_Combinado_2.shp" 
+"Rios_BWII_BH_IA.shp" 
+"Salares_BW_Cambio_SPEI.shp" 
+"Septiembre_BW_Frecuencia_Sequias_VIDECI.shp" 
+"Septiembre_BWII_BH_QA.shp" 
+"Sequia_SPEI_DJF_BW_Cambio_SPEI.shp" 
+"Sequia_SPEI_JJA_BW_Cambio_SPEI.shp" 
+"Sequia_SPEI_MAM_BW_Cambio_SPEI.shp" 
+"Sequia_SPEI_SON_BW_Cambio_SPEI.shp" 
+"SON_BW_Indice_Combinado_1.shp" 
+"SST_Promedio_BW_ENSO.shp" 
+"T_proyeccion_2030__BW.shp" 
+"T_proyeccion_2050_BW.shp" 
+"Temperatura_BWII_Clima_BH.shp" 
+"Viento_BWII_Clima_BH.shp" 
 
 */
 
 --- General Steps
+--- Register a new SERVER, 'SEI_Server'
 
---- Register a new SERVER, for example 'Water_Server'
-
---- Create a new DATABASE, for example 'master_gdb' 
-CREATE DATABASE master_gdb
+--- Create a new DATABASE, 'bW_Database' 
+CREATE DATABASE bw_database
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -50,21 +113,25 @@ CREATE ROLE support WITH
 COMMENT ON ROLE support IS 'support data';
 
 --- Change the administrator and set 'Support'
-ALTER DATABASE master_gdb OWNER TO support;
+ALTER DATABASE bw_database OWNER TO support;
+
+--- Create new Schema 'bw_data'
+CREATE SCHEMA bw_data
+    AUTHORIZATION postgres;
 
 --- create extensions related with PostGIS
 
-create EXTENSION postgis;
+CREATE EXTENSION h3 SCHEMA bw_data;
+CREATE EXTENSION fuzzystrmatch;
+CREATE EXTENSION postgis SCHEMA bw_data;
 
-create EXTENSION fuzzystrmatch;
+CREATE EXTENSION h3_postgis SCHEMA bw_data;
+CREATE EXTENSION postgis_raster SCHEMA bw_data;
+CREATE EXTENSION postgis_sfcgal SCHEMA bw_data;
 
-create EXTENSION postgis_raster;
-
-create EXTENSION postgis_topology;
-
-create EXTENSION postgis_sfcgal;
-
-create EXTENSION postgis_tiger_geocoder;
+/*CREATE EXTENSION postgis_tiger_geocoder SCHEMA bw_data;
+CREATE EXTENSION postgis_topology SCHEMA bw_data;
+*/
 
 /* 
 Connect GIS data using PostGIS and import shapefiles (.shp) using the function shp2pgsql
@@ -75,6 +142,313 @@ C:\Program Files\PostgreSQL\17\bin\shp2pgsql.exe
 
 Second, run the script and replace the path folder and .shp files, folowing the structure 
 (shp2pgsql -s <SRID> -I <path_to_shapefile.shp> <schema_name>.<table_name> > <output_file.sql>
+
+
+"Abril_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_Countries.shp bw_data.SA_Countries > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_Countries.sql
+
+
+"Abril_BWII_BH_QA.shp" 
+
+
+
+"Agosto_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Agosto_BWII_BH_QA.shp" 
+
+
+
+"Calibracion_BWII_BH_IA.shp" 
+
+
+
+"Capital_municipal_BWII_BH_IA.shp" 
+
+
+
+"Caudal_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Caudal_especifico_BWII_BH_CESP.shp" 
+
+
+
+"Cobertura_BWII_Clima_BH.shp" 
+
+
+
+"corto_plazo_precipitacion_BW_Cambio_PPT_Sequia.shp" 
+
+
+
+"corto_plazo_precipitacion_BW_Proyeccion_P.shp" 
+
+
+
+"corto_plazo_temperatura_BW_Cambio_T_Sequia.shp" 
+
+
+
+"Country_border_BW_ENSO.shp" 
+
+
+
+"Diciembre_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Diciembre_BWII_BH_QA.shp" 
+
+
+
+"DJF_BW_Indice_Combinado_1.shp" 
+
+
+
+"Enero_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Enero_BWII_BH_QA.shp" 
+
+
+
+"Escorrentia_BWII_BH_ESCT.shp" 
+
+
+
+"Evapotranspiracion_BWII_BH_PPT.shp" 
+
+
+
+"eventos_sequia_agrometeorologica_BW_Cambio_SPEI.shp" 
+
+
+
+"eventos_sequia_agrometeorologica_Extrema_BW_Cambio_SPEI.shp" 
+
+
+
+"eventos_sequia_agrometeorologica_Leve_BW_Cambio_SPEI.shp" 
+
+
+
+"eventos_sequia_agrometeorologica_Moderada_BW_Cambio_SPEI.shp" 
+
+
+
+"eventos_sequia_agrometeorologica_Severa_BW_Cambio_SPEI.shp" 
+
+
+
+"Febrero_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Febrero_BWII_BH_QA.shp" 
+
+
+
+"Humedad_BWII_Clima_BH.shp" 
+
+
+
+"Indice_de_aridez_BWII_BH_IA.shp"
+
+
+
+"Indice_de_aridez_BWII_BH_PPT.shp" 
+
+
+
+"Indices_BW_ENSO.shp" 
+
+
+
+"JJA_BW_Indice_Combinado_1.shp" 
+
+
+
+"Julio_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Julio_BWII_BH_QA.shp" 
+
+
+
+"Junio_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Junio_BWII_BH_QA.shp" 
+
+
+
+"Lago_BWII_BH_IA.shp" 
+
+
+
+"Lagos_BWII_BH_QA.shp" 
+
+
+
+"Limite_municipal_BWII_Clima_BH.shp" 
+
+
+
+"Limite_nacional_BWII_BH_IA.shp" 
+
+
+
+"Limites_internacionales_BWII_Clima_BH.shp" 
+
+
+
+"Macrocuencas_BWII_BH_IA.shp" 
+
+
+
+"Macrocuencas_BWII_BH_IA2.shp" 
+
+
+
+"MAM_BW_Indice_Combinado_1.shp" 
+
+
+
+"Marzo_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Marzo_BWII_BH_QA.shp" 
+
+
+
+"Mayo_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Mayo_BWII_BH_QA.shp" "Media_BWII_BH_QA.shp" 
+
+
+
+"mediano_plazo_precipitacion_BW_Cambio_PPT_Sequia.shp" 
+
+
+
+"mediano_plazo_precipitacion_BW_Proyeccion_P.shp" 
+
+
+
+"mediano_plazo_temperatura_BW_Cambio_T_Sequia_.shp" 
+
+
+
+"Municipios_BW_Indice_Combinado_1.shp" 
+
+
+
+"Noviembre_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Noviembre_BWII_BH_QA.shp" 
+
+
+
+"Nubosidad_BWII_Clima_BH.shp" 
+
+
+
+"Octubre_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Octubre_BWII_BH_QA.shp" 
+
+
+
+"Precipitacion_BWII_BH_PPT.shp" 
+
+
+
+"Precipitacion_BWII_Clima_BH.shp" 
+
+
+
+"Regiones_Hidroclimaticas_BW_ENSO.shp" 
+
+
+
+"Rios_BW_Cambio_PPT_Sequia.shp" 
+
+
+
+"Ríos_BW_Indice_Combinado_2.shp" 
+
+
+
+"Rios_BWII_BH_IA.shp" 
+
+
+
+"Salares_BW_Cambio_SPEI.shp" 
+
+
+
+"Septiembre_BW_Frecuencia_Sequias_VIDECI.shp" 
+
+
+
+"Septiembre_BWII_BH_QA.shp" 
+
+
+
+"Sequia_SPEI_DJF_BW_Cambio_SPEI.shp" 
+
+
+
+"Sequia_SPEI_JJA_BW_Cambio_SPEI.shp" 
+
+
+
+"Sequia_SPEI_MAM_BW_Cambio_SPEI.shp" 
+
+
+
+"Sequia_SPEI_SON_BW_Cambio_SPEI.shp" 
+
+
+
+"SON_BW_Indice_Combinado_1.shp" 
+
+
+
+"SST_Promedio_BW_ENSO.shp" 
+
+
+
+"T_proyeccion_2030__BW.shp" 
+
+
+
+"T_proyeccion_2050_BW.shp" 
+
+
+
+"Temperatura_BWII_Clima_BH.shp" 
+
+
+
+"Viento_BWII_Clima_BH.shp" 
+
+
+
 
 1. South America Countries and Boundary
 
@@ -88,82 +462,6 @@ shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_FLAU.sh
 
 shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_SLAU.shp water_data.SA_SLAU > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_SLAU.sql
 
-4. HydroSHEDS 
-
-Void DEM
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Void_DEM.shp water_data.SA_hydroSHEDS_Void_DEM > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Void_DEM.sql
-
-Flow Direcion
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Flow_Direction.shp water_data.SA_hydroSHEDS_Flow_Direction > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Flow_Direction.sql
-
-Flow Accumulation
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroSHEDS_Flow_Accumulation.shp water_data.SA_hydroSHEDS_Flow_Accumulation > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroSHEDS_Flow_Accumulation.sql
-
-5. HydroBASINS (Level 1 to 12)
-
-Level 01
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev01_v1c.shp water_data.SA_hydroBASIN_Lv01 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv01.sql
-
-Level 02
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev02_v1c.shp water_data.SA_hydroBASIN_Lv02 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv02.sql
-
-Level 03
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev03_v1c.shp water_data.SA_hydroBASIN_Lv03 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv03.sql
-
-Level 04
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev04_v1c.shp water_data.SA_hydroBASIN_Lv04 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv04.sql
-
-Level 05
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev05_v1c.shp water_data.SA_hydroBASIN_Lv05 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv05.sql
-
-Level 06
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev06_v1c.shp water_data.SA_hydroBASIN_Lv06 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv06.sql
-
-Level 07
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev07_v1c.shp water_data.SA_hydroBASIN_Lv07 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv07.sql
-
-Level 08
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev08_v1c.shp water_data.SA_hydroBASIN_Lv08 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv08.sql
-
-Level 09
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev09_v1c.shp water_data.SA_hydroBASIN_Lv09 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv09.sql
-
-Level 10
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev10_v1c.shp water_data.SA_hydroBASIN_Lv10 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv10.sql
-
-Level 11
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev11_v1c.shp water_data.SA_hydroBASIN_Lv11 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv11.sql
-
-Level 12
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\hybas_sa_lev12_v1c.shp water_data.SA_hydroBASIN_Lv12 > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroBASIN_Lv12.sql
-
-6. HydroRIVERS
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
-
-7. HydroLAKES
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroLAKES.shp water_data.SA_hydroLAKES > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroLAKES.sql
-
-8. Global Lakes and Wetlands Database (GLWD)
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_GLWD_Main_Class.shp water_data.SA_GLWD > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_GLWD.sql
-
-9. HydroWASTE
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_HydroWASTE.shp water_data.SA_Hydrowaste > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroWASTE.sql
-
-10. Global River Classification (GloRiC)
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_GloRiC.shp water_data.SA_GloRiC > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_GloRiC.sql
-
-11. Lake TEMP
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_LakeTEMP.shp water_data.SA_LakeTemp > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_LakeTEMP.sql
-
-12. Global Power Plant Database (GPPD)
-
-shp2pgsql -s 4326 -I C:\Users\USUARIO\Desktop\Geodatabase\Geodatabase\SA_hydroRIVERS.shp water_data.SA_hydroRIVERS > C:\Users\USUARIO\Documents\GitHub\GeoDatabases-And-Cloud-Computing-For-Water-Resources-Management\2-Import-files(shp2sql)\SA_hydroRIVERS.sql
 
 */
 
