@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.groupedlayercontrol@0.6.1/dist/leaflet.groupedlayercontrol.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -19,20 +20,39 @@
 
 <body>
   <div id="sidebar">
-    <h2>BW Geoportal</h2>
+    <button onclick="toggleSidebar()" class="menu-toggle">
+      <i class="fas fa-bars"></i> Menú
+    </button>
+    <button onclick="toggleDarkMode()" class="dark-toggle">
+      <i class="fas fa-moon"></i> Modo Oscuro
+    </button>
 
-    <div id="legend">
-      <h3>Leyenda</h3>
-      <ul>
-        <li><span class="legend-color" style="background:#ff0000;"></span> Puntos de interés</li>
-        <li><span class="legend-color" style="background:#0000ff;"></span> Rutas</li>
-      </ul>
-    </div>
+    <div id="sidebarContent">
+      <h2><i class="fas fa-map-marked-alt"></i> BW Geoportal</h2>
 
-    <div id="search">
-      <h3>Buscador</h3>
-      <input type="text" id="searchBox" placeholder="Buscar lugar...">
-      <button onclick="searchLocation()">Buscar</button>
+      <div id="legend">
+        <h3><i class="fas fa-list"></i> Leyenda</h3>
+        <ul>
+          <li><span class="legend-color" style="background:#ff0000;"></span> Puntos de interés</li>
+          <li><span class="legend-color" style="background:#0000ff;"></span> Rutas</li>
+        </ul>
+      </div>
+
+      <div id="search">
+        <h3><i class="fas fa-search-location"></i> Buscador</h3>
+        <input type="text" id="searchBox" placeholder="Buscar lugar...">
+        <button onclick="searchLocation()" id="searchBtn">Buscar</button>
+      </div>
+
+      <div id="layerGroups">
+        <h3><i class="fas fa-layer-group"></i> Capas temáticas</h3>
+        <button onclick="toggleGroup('Clima')">🌦 Clima</button>
+        <button onclick="toggleGroup('Hidrología')">💧 Hidrología</button>
+        <button onclick="toggleGroup('Límites')">🗺 Límites</button>
+        <button onclick="toggleGroup('Sequías')">🔥 Sequías</button>
+        <button onclick="toggleGroup('Proyecciones')">📈 Proyecciones</button>
+        <button onclick="toggleGroup('ENSO')">🌊 ENSO e índices</button>
+      </div>
     </div>
   </div>
 
