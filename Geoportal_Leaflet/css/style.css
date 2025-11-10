@@ -1,4 +1,3 @@
-/* Estilos generales */
 html, body {
   height: 100%;
   margin: 0;
@@ -9,16 +8,15 @@ html, body {
   overflow: hidden;
 }
 
-/* Mapa */
 #map {
   height: 100vh;
-  width: calc(100vw - 250px); /* Ajuste por barra lateral */
+  width: calc(100vw - 250px);
   margin-left: 250px;
   box-sizing: border-box;
   border: 2px solid #333;
+  transition: all 0.3s ease;
 }
 
-/* Barra lateral */
 #sidebar {
   position: absolute;
   top: 0;
@@ -31,9 +29,22 @@ html, body {
   box-sizing: border-box;
   z-index: 1000;
   overflow-y: auto;
+  transition: all 0.3s ease;
 }
 
-/* Leyenda */
+#sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#sidebar h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
 #legend ul {
   list-style: none;
   padding: 0;
@@ -48,7 +59,6 @@ html, body {
   vertical-align: middle;
 }
 
-/* Buscador */
 #search input {
   width: calc(100% - 10px);
   padding: 5px;
@@ -63,8 +73,74 @@ html, body {
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #search button:hover {
   background-color: #555;
+}
+
+.dark-toggle,
+.menu-toggle {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #0078D7;
+  color: white;
+}
+
+.dark-toggle:hover,
+.menu-toggle:hover {
+  background-color: #005fa3;
+}
+
+#sidebarContent {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 1000px;
+}
+
+#sidebar.collapsed #sidebarContent {
+  max-height: 0;
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+#sidebar.dark-mode {
+  background-color: #2a2a2a;
+  border-right: 2px solid #555;
+}
+
+#map.dark-mode {
+  border: 2px solid #555;
+}
+
+#search button.dark-mode,
+.dark-toggle.dark-mode {
+  background-color: #555;
+  color: #fff;
+}
+
+#search button.dark-mode:hover,
+.dark-toggle.dark-mode:hover {
+  background-color: #777;
+}
+
+#layerGroups button {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 5px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#layerGroups button:hover {
+  background-color: #ddd;
 }
