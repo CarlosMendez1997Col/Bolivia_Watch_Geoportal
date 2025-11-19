@@ -39,54 +39,54 @@ const wmsUrl = "http://localhost:8080/geoserver/BW_Geoportal/wms?";
 // Nuevos grupos temáticos
 const gruposTematicos = {
   "Sequías mensuales": [
-    "bw_Enero_BW_Frecuencia_Sequias_VIDECI", "bw_Febrero_BW_Frecuencia_Sequias_VIDECI", "bw_Marzo_BW_Frecuencia_Sequias_VIDECI",
-    "bw_Abril_BW_Frecuencia_Sequias_VIDECI", "bw_Mayo_BW_Frecuencia_Sequias_VIDECI", "bw_Junio_BW_Frecuencia_Sequias_VIDECI",
-    "bw_Julio_BW_Frecuencia_Sequias_VIDECI", "bw_Agosto_BW_Frecuencia_Sequias_VIDECI", "bw_Septiembre_BW_Frecuencia_Sequias_VIDECI",
-    "bw_Octubre_BW_Frecuencia_Sequias_VIDECI", "bw_Noviembre_BW_Frecuencia_Sequias_VIDECI", "bw_Diciembre_BW_Frecuencia_Sequias_VIDECI"
+    "bw_enero_bw_frecuencia_sequias_videci", "bw_febrero_bw_frecuencia_sequias_videci", "bw_marzo_bw_frecuencia_sequias_videci",
+    "bw_abril_bw_frecuencia_sequias_videci", "bw_mayo_bw_frecuencia_sequias_videci", "bw_junio_bw_frecuencia_sequias_videci",
+    "bw_julio_bw_frecuencia_sequias_videci", "bw_agosto_bw_frecuencia_sequias_videci", "bw_septiembre_bw_frecuencia_sequias_videci",
+    "bw_octubre_bw_frecuencia_sequias_videci", "bw_noviembre_bw_frecuencia_sequias_videci", "bw_diciembre_bw_frecuencia_sequias_videci"
   ],
   "Eventos de sequía": [
-    "bw_eventos_sequia_agrometeorologica_BW_Cambio_SPEI", "bw_eventos_sequia_agrometeorologica_Leve_BW_Cambio_SPEI",
-    "bw_eventos_sequia_agrometeorologica_Moderada_BW_Cambio_SPEI", "bw_eventos_sequia_agrometeorologica_Severa_BW_Cambio_SPEI",
-    "bw_eventos_sequia_agrometeorologica_Extrema_BW_Cambio_SPEI"
+    "bw_eventos_sequia_agrometeorologica_bw_cambio_spei", "bw_eventos_sequia_agrometeorologica_leve_bw_cambio_spei",
+    "bw_eventos_sequia_agrometeorologica_moderada_bw_cambio_spei", "bw_eventos_sequia_agrometeorologica_severa_bw_cambio_spei",
+    "bw_eventos_sequia_agrometeorologica_extrema_bw_cambio_spei"
   ],
   "Índices climáticos": [
-    "bw_DJF_BW_Indice_Combinado_1", "bw_JJA_BW_Indice_Combinado_1", "bw_MAM_BW_Indice_Combinado_1", "bw_SON_BW_Indice_Combinado_1",
-    "bw_Ríos_BW_Indice_Combinado_2", "bw_Municipios_BW_Indice_Combinado_1", "bw_Indices_BW_ENSO"
+    "bw_djf_bw_indice_combinado_1", "bw_jja_bw_indice_combinado_1", "bw_mam_bw_indice_combinado_1", "bw_son_bw_indice_combinado_1",
+    "bw_ríos_bw_indice_combinado_2", "bw_municipios_bw_indice_combinado_1", "bw_indices_bw_enso"
   ],
   "Proyecciones climáticas": [
-    "bw_T_proyeccion_2030__BW", "bw_T_proyeccion_2050_BW", "bw_corto_plazo_precipitacion_BW_Cambio_PPT_Sequia",
-    "bw_corto_plazo_precipitacion_BW_Proyeccion_P", "bw_corto_plazo_temperatura_BW_Cambio_T_Sequia",
-    "bw_mediano_plazo_precipitacion_BW_Cambio_PPT_Sequia", "bw_mediano_plazo_precipitacion_BW_Proyeccion_P",
-    "bw_mediano_plazo_temperatura_BW_Cambio_T_Sequia_"
+    "bw_t_proyeccion_2030__bw", "bw_t_proyeccion_2050_bw", "bw_corto_plazo_precipitacion_bw_cambio_ppt_sequia",
+    "bw_corto_plazo_precipitacion_bw_proyeccion_p", "bw_corto_plazo_temperatura_bw_cambio_t_sequia",
+    "bw_mediano_plazo_precipitacion_bw_cambio_ppt_sequia", "bw_mediano_plazo_precipitacion_bw_proyeccion_p",
+    "bw_mediano_plazo_temperatura_bw_cambio_t_sequia_"
   ],
   "Hidrología y cuerpos de agua": [
-    "bw_Rios_BWII_BH_IA", "bw_Lagos_BWII_BH_QA", "bw_Lago_BWII_BH_IA", "bw_Escorrentia_BWII_BH_ESCT",
-    "bw_Caudal_BW_Frecuencia_Sequias_VIDECI", "bw_Caudal_especifico_BWII_BH_CESP", "bw_Evapotranspiracion_BWII_BH_PPT",
-    "bw_Rios_BW_Cambio_PPT_Sequia", "bw_Salares_BW_Cambio_SPEI"
+    "bw_rios_bwii_bh_ia", "bw_lagos_bwii_bh_qa", "bw_lago_bwii_bh_ia", "bw_escorrentia_bwii_bh_esct",
+    "bw_caudal_bw_frecuencia_sequias_videci", "bw_caudal_especifico_bwii_bh_cesp", "bw_evapotranspiracion_bwii_bh_ppt",
+    "bw_rios_bw_cambio_ppt_sequia", "bw_salares_bw_cambio_spei"
   ],
   "Límites y divisiones": [
-    "bw_Limite_municipal_BWII_Clima_BH", "bw_Limite_nacional_BWII_BH_IA", "bw_Limites_internacionales_BWII_Clima_BH",
-    "bw_Country_border_BW_ENSO", "bw_Macrocuencas_BWII_BH_IA", "bw_Macrocuencas_BWII_BH_IA2", "bw_Capital_municipal_BWII_BH_IA"
+    "bw_limite_municipal_bwii_clima_bh", "bw_limite_nacional_bwii_bh_ia", "bw_limites_internacionales_bwii_clima_bh",
+    "bw_country_border_bw_enso", "bw_macrocuencas_bwii_bh_ia", "bw_macrocuencas_bwii_bh_ia2", "bw_capital_municipal_bwii_bh_ia"
   ],
   "Clima observado": [
-    "bw_Temperatura_BWII_Clima_BH", "bw_Precipitacion_BWII_Clima_BH", "bw_Humedad_BWII_Clima_BH",
-    "bw_Nubosidad_BWII_Clima_BH", "bw_Viento_BWII_Clima_BH", "bw_Cobertura_BWII_Clima_BH"
+    "bw_temperatura_bwii_clima_bh", "bw_precipitacion_bwii_clima_bh", "bw_humedad_bwii_clima_bh",
+    "bw_nubosidad_bwii_clima_bh", "bw_viento_bwii_clima_bh", "bw_cobertura_bwii_clima_bh"
   ],
   "Índices de aridez": [
-    "bw_Indice_de_aridez_BWII_BH_IA", "bw_Indice_de_aridez_BWII_BH_PPT"
+    "bw_indice_de_aridez_bwii_bh_ia", "bw_indice_de_aridez_bwii_bh_ppt"
   ],
   "ENSO y regiones hidroclimáticas": [
-    "bw_Regiones_Hidroclimaticas_BW_ENSO", "bw_SST_Promedio_BW_ENSO"
+    "bw_regiones_hidroclimaticas_bw_enso", "bw_sst_promedio_bw_enso"
   ],
   "Calibración y calidad": [
-    "bw_Calibracion_BWII_BH_IA", "bw_Abril_BWII_BH_QA", "bw_Agosto_BWII_BH_QA", "bw_Diciembre_BWII_BH_QA",
-    "bw_Enero_BWII_BH_QA", "bw_Febrero_BWII_BH_QA", "bw_Julio_BWII_BH_QA", "bw_Junio_BWII_BH_QA",
-    "bw_Marzo_BWII_BH_QA", "bw_Mayo_BWII_BH_QA", "bw_Media_BWII_BH_QA", "bw_Noviembre_BWII_BH_QA",
-    "bw_Octubre_BWII_BH_QA", "bw_Septiembre_BWII_BH_QA"
+    "bw_calibracion_bwii_bh_ia", "bw_abril_bwii_bh_qa", "bw_agosto_bwii_bh_qa", "bw_diciembre_bwii_bh_qa",
+    "bw_enero_bwii_bh_qa", "bw_febrero_bwii_bh_qa", "bw_julio_bwii_bh_qa", "bw_junio_bwii_bh_qa",
+    "bw_marzo_bwii_bh_qa", "bw_mayo_bwii_bh_qa", "bw_media_bwii_bh_qa", "bw_noviembre_bwii_bh_qa",
+    "bw_octubre_bwii_bh_qa", "bw_septiembre_bwii_bh_qa"
   ],
   "SPEI estacional": [
-    "bw_Sequia_SPEI_DJF_BW_Cambio_SPEI", "bw_Sequia_SPEI_JJA_BW_Cambio_SPEI",
-    "bw_Sequia_SPEI_MAM_BW_Cambio_SPEI", "bw_Sequia_SPEI_SON_BW_Cambio_SPEI"
+    "bw_sequia_spei_djf_bw_cambio_spei", "bw_sequia_spei_jja_bw_cambio_spei",
+    "bw_sequia_spei_mam_bw_cambio_spei", "bw_sequia_spei_son_bw_cambio_spei"
   ]
 };
 
@@ -114,7 +114,7 @@ const baseMaps = {
   "Topográfico Esri": esriTopo
 };
 
-L.control.layers(baseMaps, capasSuperpuestas, { collapsed: false }).addTo(map);
+L.control.layers(baseMaps, capasSuperpuestas, { collapsed: true }).addTo(map);
 
 // ==========================
 // 5. Activación por grupo (botones)
