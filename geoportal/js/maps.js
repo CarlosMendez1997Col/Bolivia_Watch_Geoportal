@@ -34,7 +34,7 @@ L.control.scale().addTo(map);
 // 3. Capas temáticas WMS
 // ==========================
 
-const wmsUrl = "http://localhost:8080/geoserver/BW_Geoportal/wms?";
+const wmsUrl = "https://sei-latam-bw-watch-server.publicvm.com/geoserver/Bolivia_Watch/wms?";
 
 // Nuevos grupos temáticos
 const gruposTematicos = {
