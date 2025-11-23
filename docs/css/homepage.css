@@ -57,11 +57,11 @@ body {
 }
 
 .texto-institucional {
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(223, 221, 221, 0.95);
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
@@ -69,6 +69,7 @@ body {
 .botones-tematicos {
   display: flex;
   flex-direction: column;
+  text-align: justify;
   gap: 1rem;
 }
 
@@ -124,12 +125,14 @@ body {
 
 .overlay-titulo {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(0,0,0,0.5);
   color: white;
   padding: 1rem 2rem;
   border-radius: 8px;
+  text-align: center;
 }
 
 .overlay-titulo h1 {
