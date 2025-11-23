@@ -106,7 +106,7 @@ body {
 }
 
 .logos-central img {
-  max-height: 150px;
+  max-height: 200px;
 }
 
 /* === PANEL DERECHO === */
@@ -148,5 +148,5 @@ body {
 }
 
 .logo-superior img {
-  max-width: 210px;
+  max-width: 150px;
 }
