@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Avenit Next', sans-serif;
   background-color: #f4f4f4;
   color: #333;
 }
@@ -13,7 +13,7 @@ body {
 
 /* Panel Izquierdo */
 .panel-izquierdo {
-  width: 10%;
+  width: 4%;
   background-color: #f5f5f5;
   padding: 1.5rem;
   display: flex;
@@ -21,30 +21,24 @@ body {
   justify-content: space-between;
 }
 
+.flags img {
+  height: 185px;
+  margin-right: 0.5rem;
+}
+
 .country img {
-  height: 250px;
+  height: 400px;
   margin-right: 0.5rem;
 }
 
 .panel-central {
-  width: 45%;
+  width: 41%;
   position: relative;
-  background-color: #eaf4fc;
+  background-color: #cacdcf;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-}
-
-.fondo-ilustrado img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.3;
 }
 
 .contenido-central {
@@ -73,11 +67,11 @@ body {
 }
 
 .boton-tema {
-  background-color: #0077c8;
+  background-color: #66666e;
   color: white;
   border: none;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
@@ -104,7 +98,7 @@ body {
 
 /* Panel Derecho */
 .panel-derecho {
-  width: 45%;
+  width: 55%;
   position: relative;
   overflow: hidden;
 }
@@ -138,5 +132,5 @@ body {
 }
 
 .logo-superior img {
-  max-width: 120px;
+  max-width: 210px;
 }
