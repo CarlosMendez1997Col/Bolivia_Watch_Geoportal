@@ -27,12 +27,12 @@ body {
 }
 
 .flags img {
-  height: 100px;
+  height: 120px;
   margin-bottom: 0.5rem;
 }
 
 .country img {
-  height: 250px;
+  height: 300px;
   margin-top: 1rem;
 }
 
