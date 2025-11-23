@@ -72,10 +72,9 @@ body {
   border: none;
   padding: 1rem;
   font-size: 3rem;
-  font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  text-align: left;
+  text-align: justify;
   transition: background-color 0.3s ease;
 }
 
@@ -91,7 +90,7 @@ body {
 }
 
 .logos-central img {
-  max-height: 50px;
+  max-height: 150px;
 }
 
 
