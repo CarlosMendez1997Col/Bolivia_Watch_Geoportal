@@ -80,6 +80,7 @@ body {
   text-align: justify;
 }
 
+/* Enlaces dentro del texto */
 .contenido a {
   color: #bd4e0c;
   text-decoration: none;
@@ -88,4 +89,35 @@ body {
 .contenido a:hover {
   text-decoration: underline;
   color: #bd4e0c;
+}
+
+/* Contenedor de botones */
+.botones-cuencas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Botones de cuencas */
+.botones-cuencas .boton-cuenca {
+  display: inline-block;
+  color: #000000; /* texto negro */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem 0.8rem 2.8rem; /* espacio para el icono */
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+
+.boton-cuenca {
+  background-image: url('img');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px 20px;
+}
+
+.botones-cuencas .boton-cuenca:hover {
+  background-color: #999c9e;
+  color: #ffffff; /* texto blanco en hover */
 }
