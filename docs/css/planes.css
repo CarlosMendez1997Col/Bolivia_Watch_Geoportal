@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 2rem;
+}
+
+header {
+  background-color: #0077c8;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
