@@ -24,15 +24,15 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  max-width: 1500px;
+  margin: 3% auto;
   padding: 0;
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -41,7 +41,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 100, 0, 0.6);
+  background-color: rgba(3, 77, 3, 0.6);
   color: white;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -63,8 +63,14 @@ body {
 
 .contenido h2 {
   font-size: 1.5rem;
+  color: green;
   margin-bottom: 1rem;
   text-align: justify;
+}
+
+.contenido h2:hover {
+  text-decoration: underline;
+  color: green;
 }
 
 .contenido p {
@@ -72,4 +78,14 @@ body {
   line-height: 1.6;
   margin-bottom: 1rem;
   text-align: justify;
+}
+
+.contenido a {
+  color: #bd4e0c;
+  text-decoration: none;
+}
+
+.contenido a:hover {
+  text-decoration: underline;
+  color: #bd4e0c;
 }
