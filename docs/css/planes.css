@@ -1,3 +1,4 @@
+/* === Base general === */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -5,34 +6,40 @@ body {
   color: #333;
 }
 
+/* === Encabezado institucional === */
 .encabezado {
   background-color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
 }
 
 .logos {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .logos img {
-  height: 50px;
+  height: 60px;
   object-fit: contain;
 }
 
+/* === Banner principal === */
 .banner {
   position: relative;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 3% auto;
   padding: 0;
   overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .banner img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
@@ -43,7 +50,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgba(3, 77, 3, 0.6);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
   border-radius: 8px;
   text-align: center;
   max-width: 90%;
@@ -51,20 +58,24 @@ body {
 
 .titulo-banner h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1.4;
 }
 
+/* === Contenido principal === */
 .contenido {
-  padding: 2rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
 
 .contenido h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #00904E;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: justify;
 }
 
@@ -76,11 +87,11 @@ body {
 .contenido p {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: justify;
 }
 
-/* Enlaces dentro del texto */
+/* === Enlaces dentro del texto === */
 .contenido a {
   color: #bd4e0c;
   text-decoration: none;
@@ -91,7 +102,7 @@ body {
   color: #bd4e0c;
 }
 
-/* Contenedor de botones */
+/* === Botones de cuenca === */
 .botones-cuencas {
   display: flex;
   flex-direction: column;
@@ -101,6 +112,7 @@ body {
 
 .botones-cuencas .boton-cuenca {
   display: inline-block;
+  background-color: #ffffff;
   color: #000000;
   font-weight: bold;
   text-decoration: none;
@@ -108,8 +120,6 @@ body {
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1rem;
-
-  /* Ícono como fondo decorativo */
   background-image: url('../img/icon_search.png');
   background-repeat: no-repeat;
   background-position: 10px center;
@@ -119,4 +129,54 @@ body {
 .botones-cuencas .boton-cuenca:hover {
   background-color: #c8cacc;
   color: #ffffff;
+}
+
+/* === Bloques de modelos MTDP === */
+.modelo-mtdp {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modelo-mtdp h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #005fa3;
+}
+
+/* === Responsivo para tablet y móvil === */
+@media (max-width: 768px) {
+  .encabezado {
+    padding: 1rem;
+  }
+
+  .logos img {
+    height: 40px;
+  }
+
+  .titulo-banner h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenido {
+    padding: 2rem 1rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.4rem;
+  }
+
+  .contenido p {
+    font-size: 0.95rem;
+  }
+
+  .botones-cuencas .boton-cuenca {
+    font-size: 0.95rem;
+    padding-left: 2.5rem;
+    background-position: 8px center;
+    background-size: 18px 18px;
+  }
 }
