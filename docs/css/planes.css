@@ -63,14 +63,14 @@ body {
 
 .contenido h2 {
   font-size: 1.5rem;
-  color: green;
+  color: #00904E;
   margin-bottom: 1rem;
   text-align: justify;
 }
 
 .contenido h2:hover {
   text-decoration: underline;
-  color: green;
+  color: #00904E;
 }
 
 .contenido p {
