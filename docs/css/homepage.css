@@ -90,7 +90,7 @@ body {
 }
 
 .boton-tema img {
-  height: 50px;
+  height: 100px;
   width: auto;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .logos-central img {
-  max-height: 50px;
+  max-height: 100px;
 }
 
 /* === PANEL DERECHO === */
