@@ -1,10 +1,4 @@
-*.sql linguist-language=SQL
-*.sql linguist-detectable=true
-
-*.css linguist-language=CSS
-*.css linguist-detectable=true
-
-*.js linguist-language=JavaScript
-*.js linguist-detectable=true
-
+*.sql linguist-language=SQL linguist-detectable=true
+*.css linguist-language=CSS linguist-detectable=true
+*.js linguist-language=JavaScript linguist-detectable=true
 *.ipynb linguist-language=Python linguist-detectable=true
