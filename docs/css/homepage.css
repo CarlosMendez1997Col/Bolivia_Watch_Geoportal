@@ -61,7 +61,7 @@ body {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
@@ -90,7 +90,7 @@ body {
 }
 
 .boton-tema img {
-  height: 115px;
+  height: 100px;
   width: auto;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .logos-central img {
-  max-height: 115px;
+  max-height: 100px;
 }
 
 /* === PANEL DERECHO === */
