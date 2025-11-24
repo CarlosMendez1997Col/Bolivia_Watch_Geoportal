@@ -1,6 +1,6 @@
-/docs/*.html linguist-detectable=true
-/docs/css/*.css linguist-detectable=true
-/docs/js/*.js linguist-detectable=true
+/docs/**/*.html linguist-detectable=true
+/docs/**/*.css linguist-detectable=true
+/docs/**/*.js linguist-detectable=true
 
 *.html linguist-language=HTML
 *.css linguist-language=CSS
