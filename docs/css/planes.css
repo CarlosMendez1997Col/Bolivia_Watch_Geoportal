@@ -6,38 +6,53 @@ body {
 }
 
 .encabezado {
-  background-color: #005fa3;
-  color: white;
+  background-color: #ffffff;
   padding: 1rem 2rem;
-  text-align: center;
-}
-
-.encabezado h1 {
-  margin-top: 1rem;
-  font-size: 2rem;
 }
 
 .logos {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .logos img {
-  height: 60px;
+  height: 50px;
   object-fit: contain;
 }
 
-.imagen-principal {
+.banner {
+  position: relative;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
   overflow: hidden;
 }
 
-.imagen-principal img {
+.banner img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.titulo-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 100, 0, 0.6);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.titulo-banner h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.4;
 }
 
 .contenido {
@@ -49,10 +64,12 @@ body {
 .contenido h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .contenido p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: justify;
 }
