@@ -36,7 +36,9 @@
       Conozca más acerca del trabajo de SEI en la Actualización del Balance Hídrico (2023)
     </a>
   </div>
+</section>
 
+<section class="contenido">
   <h2>Área de estudio</h2>
   <p>
     El estudio de Balance Hídrico de Bolivia [BHB] brinda una descripción de las condiciones climáticas, hidrológicas y en este caso se suman las condiciones hidrogeológicas 
@@ -46,125 +48,124 @@
     representación de todas las condiciones hidrológicas y climáticas en el territorio.
   </p>
 
-</section>
+  <section class="balance-layout">
+    <!-- Sidebar de navegación -->
+    <aside class="balance-sidebar">
+      <button class="tab-btn active" data-tab="estudio">El área de estudio</button>
+      <button class="tab-btn" data-tab="unidades">Unidades Hidrográficas</button>
+      <button class="tab-btn" data-tab="endorreica">Región Endorreica</button>
+      <button class="tab-btn" data-tab="plata">Región del Plata</button>
+      <button class="tab-btn" data-tab="amazonas">Región del Amazonas</button>
+    </aside>
 
-<section class="balance-layout">
-  <!-- Sidebar de navegación -->
-  <aside class="balance-sidebar">
-    <button class="tab-btn active" data-tab="estudio">El área de estudio</button>
-    <button class="tab-btn" data-tab="unidades">Unidades Hidrográficas</button>
-    <button class="tab-btn" data-tab="endorreica">Región Endorreica</button>
-    <button class="tab-btn" data-tab="plata">Región del Plata</button>
-    <button class="tab-btn" data-tab="amazonas">Región del Amazonas</button>
-  </aside>
-
-  <!-- Contenido principal -->
-  <main class="balance-contenido">
-    <!-- Panel: El área de estudio -->
-    <section class="tab-panel active" id="panel-estudio">
-      <div class="panel-header">
-        <h2>El área de estudio</h2>
-      </div>
-      <div class="panel-body">
-        <div class="panel-texto">
-          <p>
-            La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
-            y el límite político del país. De forma oficial el continente sudamericano está constituido en el nivel 1 [método Pfafstetter de 1989], por 10 unidades o regiones 
-            hidrográficas de las cuales, las regiones 0 [Región Endorreica], 4 [Región del Amazonas] y 8 [Región del Plata] del nivel 1 cuentan con superficie en territorio 
-            de Bolivia
-          </p>
+    <!-- Contenido principal -->
+    <main class="balance-contenido">
+      <!-- Panel: El área de estudio -->
+      <section class="tab-panel active" id="panel-estudio">
+        <div class="panel-header">
+          <h2>El área de estudio</h2>
         </div>
-        <div class="panel-mapa">
-          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center= -63,-16&level=5"
-                  frameborder="0" loading="lazy"></iframe>
-          <div class="panel-leyenda">
-            <span class="leyenda-item"><span class="punto azul"></span> Capital municipal</span>
-            <span class="leyenda-item"><span class="linea negra"></span> Límite municipal</span>
+        <div class="panel-body">
+          <div class="panel-texto">
+            <p>
+              La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
+              y el límite político del país. De forma oficial el continente sudamericano está constituido en el nivel 1 [método Pfafstetter de 1989], por 10 unidades o regiones 
+              hidrográficas de las cuales, las regiones 0 [Región Endorreica], 4 [Región del Amazonas] y 8 [Región del Plata] del nivel 1 cuentan con superficie en territorio 
+              de Bolivia
+            </p>
+          </div>
+          <div class="panel-mapa">
+            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center= -63,-16&level=5"
+                    frameborder="0" loading="lazy"></iframe>
+            <div class="panel-leyenda">
+              <span class="leyenda-item"><span class="punto azul"></span> Capital municipal</span>
+              <span class="leyenda-item"><span class="linea negra"></span> Límite municipal</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Panel: Unidades Hidrográficas -->
-    <section class="tab-panel" id="panel-unidades">
-      <div class="panel-header">
-        <h2>Unidades Hidrográficas</h2>
-      </div>
-      <div class="panel-body">
-        <div class="panel-texto">
-          <p>
-            Teniendo en cuenta el contexto existente en el país para la delimitación de unidades hidrográficas se definieron como unidades de reportes las 51 Unidades Hidrográficas 
-            de Información (UHI) priorizadas en la actual Política Nacional del Agua dado que presentan interés estratégico. Sin embargo, el modelo del sistema de recursos 
-            hídricos se construyó en función de las 170 Unidades Hidrográficas de Gestión (UHG) que resultarían ser la unidad de análisis en las Unidades de Gestión de 
-            Cuenca distribuidas en las tres zonas hidrográficas.
-          </p>
+      <!-- Panel: Unidades Hidrográficas -->
+      <section class="tab-panel" id="panel-unidades">
+        <div class="panel-header">
+          <h2>Unidades Hidrográficas</h2>
         </div>
-        <div class="panel-mapa">
-          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-16&level=5"
-                  frameborder="0" loading="lazy"></iframe>
+        <div class="panel-body">
+          <div class="panel-texto">
+            <p>
+              Teniendo en cuenta el contexto existente en el país para la delimitación de unidades hidrográficas se definieron como unidades de reportes las 51 Unidades Hidrográficas 
+              de Información (UHI) priorizadas en la actual Política Nacional del Agua dado que presentan interés estratégico. Sin embargo, el modelo del sistema de recursos 
+              hídricos se construyó en función de las 170 Unidades Hidrográficas de Gestión (UHG) que resultarían ser la unidad de análisis en las Unidades de Gestión de 
+              Cuenca distribuidas en las tres zonas hidrográficas.
+            </p>
+          </div>
+          <div class="panel-mapa">
+            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-16&level=5"
+                    frameborder="0" loading="lazy"></iframe>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Panel: Región Endorreica -->
-    <section class="tab-panel" id="panel-endorreica">
-      <div class="panel-header">
-        <h2>Región Endorreica</h2>
-      </div>
-      <div class="panel-body">
-        <div class="panel-texto">
-          <p>
-            La región hidrográfica endorreica se constituye de 326 032 km2 de superficie distribuidos en una seria de sistemas cerrados cuyos puntos de acumulación 
-            son mayormente Lagos y Salares de la planicie continental formada por la cordillera de los Andes, los dos cuerpos de agua más representativos de esta 
-            región son el Lago Titicaca [8 372 km2 de superficie] y el Salar de Uyuni [10 580 km2 de superficie], esta región está conformado por territorio de 
-            Perú, Chile, Argentina y Bolivia la cual cuenta con 151 722 km2 [46.53%] de esta región hidrográfica. 
-          </p>
+      <!-- Panel: Región Endorreica -->
+      <section class="tab-panel" id="panel-endorreica">
+        <div class="panel-header">
+          <h2>Región Endorreica</h2>
         </div>
-        <div class="panel-mapa">
-          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-67,-19&level=6"
-                  frameborder="0" loading="lazy"></iframe>
+        <div class="panel-body">
+          <div class="panel-texto">
+            <p>
+              La región hidrográfica endorreica se constituye de 326 032 km2 de superficie distribuidos en una seria de sistemas cerrados cuyos puntos de acumulación 
+              son mayormente Lagos y Salares de la planicie continental formada por la cordillera de los Andes, los dos cuerpos de agua más representativos de esta 
+              región son el Lago Titicaca [8 372 km2 de superficie] y el Salar de Uyuni [10 580 km2 de superficie], esta región está conformado por territorio de 
+              Perú, Chile, Argentina y Bolivia la cual cuenta con 151 722 km2 [46.53%] de esta región hidrográfica. 
+            </p>
+          </div>
+          <div class="panel-mapa">
+            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-67,-19&level=6"
+                    frameborder="0" loading="lazy"></iframe>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Panel: Región del Plata -->
-    <section class="tab-panel" id="panel-plata">
-      <div class="panel-header">
-        <h2>Región del Plata</h2>
-      </div>
-      <div class="panel-body">
-        <div class="panel-texto">
-          <p>
-            Es la segunda zona de aporte más grande con una extensión de 4.14 millones de km2, distribuido entre Brasil, Paraguay, Uruguay Argentina y Bolivia, 
-            la cual cuenta con 225 492 km2 [5.45%] de aporte a esta macrorregión.
-          </p>
+      <!-- Panel: Región del Plata -->
+      <section class="tab-panel" id="panel-plata">
+        <div class="panel-header">
+          <h2>Región del Plata</h2>
         </div>
-        <div class="panel-mapa">
-          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-60,-19&level=6"
-                  frameborder="0" loading="lazy"></iframe>
+        <div class="panel-body">
+          <div class="panel-texto">
+            <p>
+              Es la segunda zona de aporte más grande con una extensión de 4.14 millones de km2, distribuido entre Brasil, Paraguay, Uruguay Argentina y Bolivia, 
+              la cual cuenta con 225 492 km2 [5.45%] de aporte a esta macrorregión.
+            </p>
+          </div>
+          <div class="panel-mapa">
+            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-60,-19&level=6"
+                    frameborder="0" loading="lazy"></iframe>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Panel: Región del Amazonas -->
-    <section class="tab-panel" id="panel-amazonas">
-      <div class="panel-header">
-        <h2>Región del Amazonas</h2>
-      </div>
-      <div class="panel-body">
-        <div class="panel-texto">
-          <p>
-            Es la zona de aporte más grande del mundo con unos 6.14 millones de km2, cuenta con superficie extendida en Brasil, Venezuela, Guyana, Colombia, Ecuador, 
-            Perú y Bolivia la cual aporta con 720 792 km2 [11.73%] en extensión.
-          </p>
+      <!-- Panel: Región del Amazonas -->
+      <section class="tab-panel" id="panel-amazonas">
+        <div class="panel-header">
+          <h2>Región del Amazonas</h2>
         </div>
-        <div class="panel-mapa">
-          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-13&level=6"
-                  frameborder="0" loading="lazy"></iframe>
+        <div class="panel-body">
+          <div class="panel-texto">
+            <p>
+              Es la zona de aporte más grande del mundo con unos 6.14 millones de km2, cuenta con superficie extendida en Brasil, Venezuela, Guyana, Colombia, Ecuador, 
+              Perú y Bolivia la cual aporta con 720 792 km2 [11.73%] en extensión.
+            </p>
+          </div>
+          <div class="panel-mapa">
+            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-13&level=6"
+                    frameborder="0" loading="lazy"></iframe>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </section>
 </section>
 
 <script>
@@ -185,6 +186,136 @@
 
     // Inicial: mostrar “El área de estudio”
     showPanel('estudio');
+  });
+</script>
+
+
+<section class="contenido">
+  <h2>Información climática y biofísica</h2>
+  <section class="panel-climatico">
+    <aside class="clima-sidebar">
+      <button class="clima-btn active" data-layer="precipitacion">Precipitación</button>
+      <button class="clima-btn" data-layer="temperatura">Temperatura</button>
+      <button class="clima-btn" data-layer="humedad">Humedad relativa</button>
+      <button class="clima-btn" data-layer="viento">Velocidad del viento</button>
+      <button class="clima-btn" data-layer="nubosidad">Nubosidad</button>
+      <button class="clima-btn" data-layer="cobertura">Cobertura del suelo</button>
+    </aside>
+
+    <main class="clima-contenido">
+      <div class="mapa-climatico">
+        <iframe id="mapa-clima" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=precipitacion" frameborder="0"></iframe>
+      </div>
+      <div class="leyenda-clima">
+        <p>Seleccione una variable para visualizar su distribución espacial en Bolivia.</p>
+      </div>
+    </main>
+  </section>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.clima-btn');
+    const iframe = document.getElementById('mapa-clima');
+
+    const layerURLs = {
+      precipitacion: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=precipitacion',
+      temperatura: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=temperatura',
+      humedad: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=humedad',
+      viento: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=viento',
+      nubosidad: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=nubosidad',
+      cobertura: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=cobertura',
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const layer = btn.dataset.layer;
+        iframe.src = layerURLs[layer];
+      });
+    });
+  });
+</script>
+
+
+<section class="contenido">
+  <h2>Resultados</h2>
+  <section class="panel-clima-expandido">
+    <!-- Botonera horizontal -->
+    <nav class="clima-tabs">
+      <button class="clima-tab active" data-var="precipitacion">Precipitación</button>
+      <button class="clima-tab" data-var="evapotranspiracion">Evapotranspiración</button>
+      <button class="clima-tab" data-var="escorrentia">Escorrentía</button>
+      <button class="clima-tab" data-var="caudal">Caudal específico</button>
+      <button class="clima-tab" data-var="aridez">Índice de aridez</button>
+      <button class="clima-tab" data-var="caudales">Caudales</button>
+      <button class="clima-tab" data-var="balance">Balance mensual</button>
+    </nav>
+
+    <!-- Contenedor dinámico -->
+    <div class="clima-panel">
+      <div class="clima-texto" id="clima-texto">
+        <p>
+          La precipitación anual varía significativamente en Bolivia, con máximos en la Amazonía y mínimos en el Altiplano. Esta variable es clave para entender la disponibilidad hídrica y el comportamiento de las cuencas.
+        </p>
+      </div>
+      <div class="clima-mapa">
+        <iframe id="clima-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=precipitacion" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.clima-tab');
+    const mapa = document.getElementById('clima-mapa');
+    const texto = document.getElementById('clima-texto');
+
+    const contenidos = {
+      precipitacion: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=precipitacion',
+        texto: 'La precipitación anual varía significativamente en Bolivia, con máximos en la Amazonía y mínimos en el Altiplano. Esta variable es clave para entender la disponibilidad hídrica y el comportamiento de las cuencas.'
+      },
+      evapotranspiracion: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=evapotranspiracion',
+        texto: 'La evapotranspiración está influenciada por la humedad del suelo y la radiación solar. Los valores más altos se encuentran en la Amazonía y los más bajos en el Altiplano.'
+      },
+      escorrentia: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=escorrentia',
+        texto: 'La escorrentía representa el agua que fluye sobre la superficie. Es mayor en zonas con alta pendiente y baja infiltración, como la región andina.'
+      },
+      caudal: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=caudal',
+        texto: 'El caudal específico mide el flujo por unidad de área. Es útil para comparar el rendimiento hídrico entre cuencas de distinto tamaño.'
+      },
+      aridez: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=aridez',
+        texto: 'El índice de aridez relaciona la precipitación con la evapotranspiración potencial. Valores altos indican zonas secas con déficit hídrico.'
+      },
+      caudales: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=caudales',
+        texto: 'Los caudales reflejan el volumen de agua que circula por los ríos. Su análisis permite evaluar disponibilidad y variabilidad estacional.'
+      },
+      balance: {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=balance',
+        texto: 'El balance hídrico mensual muestra la relación entre entradas (precipitación) y salidas (evapotranspiración, escorrentía) a lo largo del año.'
+      }
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const variable = btn.dataset.var;
+        mapa.src = contenidos[variable].url;
+        texto.innerHTML = `<p>${contenidos[variable].texto}</p>`;
+      });
+    });
   });
 </script>
 
