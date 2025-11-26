@@ -1,25 +1,325 @@
+/* === Base general === */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  padding: 2rem;
 }
 
-header {
-  background-color: #0077c8;
+/* === Encabezado institucional === */
+.encabezado {
+  background-color: #ffffff;
+  padding: 1.5rem 3rem;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* === Banner principal === */
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 3% auto;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.titulo-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(94,221,223,0.6);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.titulo-banner h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/* === Contenido principal === */
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 8px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2rem;
+.contenido h2 {
+  font-size: 1.8rem;
+  color: #0076CE;
+  margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
-main {
-  margin-top: 2rem;
+.contenido h2:hover {
+  text-decoration: underline;
+  color: #0076CE;
+}
+
+.contenido p {
   font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* === Enlaces dentro del texto === */
+.contenido a {
+  color: #bd4e0c;
+  text-decoration: none;
+}
+
+.contenido a:hover {
+  text-decoration: underline;
+  color: #bd4e0c;
+}
+
+/* === Botones de cuenca === */
+.botones-cuencas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.botones-cuencas .boton-cuenca {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem 0.8rem 2.8rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  background-image: url('../img/icon_search.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px 20px;
+}
+
+.botones-cuencas .boton-cuenca:hover {
+  background-color: #c8cacc;
+  color: #ffffff;
+}
+
+
+
+/* Layout principal del panel */
+.balance-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  max-width: 1400px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.balance-sidebar {
+  background-color: #f6f7f8;
+  border-right: 1px solid #ddd;
+  padding: 1.25rem;
+}
+
+.sidebar-titulo {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Botones de pestañas */
+.tab-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-btn:hover {
+  background-color: #00904E;
+  color: #fff;
+  border-color: #00904E;
+}
+
+.tab-btn.active {
+  background-color: #003f6b;
+  color: #fff;
+  border-color: #003f6b;
+}
+
+/* Contenido principal */
+.balance-contenido {
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+/* Paneles */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Encabezado de panel */
+.panel-header h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+  color: #005fa3;
+  font-weight: 700;
+}
+
+/* Cuerpo de panel: dos columnas en escritorio */
+.panel-body {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Texto del panel */
+.panel-texto p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #333;
+  text-align: justify;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Mapa incrustado */
+.panel-mapa iframe {
+  width: 100%;
+  height: 560px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Leyenda simple */
+.panel-leyenda {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.leyenda-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.punto.azul {
+  width: 10px; height: 10px; border-radius: 50%; background: #1d7cf2; display: inline-block;
+}
+
+.linea.negra {
+  width: 18px; height: 2px; background: #000; display: inline-block;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .panel-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .balance-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .panel-mapa iframe {
+    height: 420px;
+  }
+}
+
+
+
+/* === Responsivo para tablet y móvil === */
+@media (max-width: 768px) {
+  .encabezado {
+    padding: 1rem;
+  }
+
+  .logos img {
+    height: 40px;
+  }
+
+  .titulo-banner h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenido {
+    padding: 2rem 1rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.4rem;
+  }
+
+  .contenido p {
+    font-size: 0.95rem;
+  }
+
+  .botones-cuencas .boton-cuenca {
+    font-size: 0.95rem;
+    padding-left: 2.5rem;
+    background-position: 8px center;
+    background-size: 18px 18px;
+  }
 }
