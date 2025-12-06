@@ -162,3 +162,111 @@ body {
     height: 420px;
   }
 }
+
+
+.panel-enso-global {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+}
+
+.enso-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+}
+
+.enso-izquierda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.enso-simbologia h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.enso-simbologia ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enso-simbologia li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  display: inline-block;
+}
+
+.enso-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.enso-btn {
+  flex: 1 1 45%;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.enso-btn:hover {
+  background-color: #B54900;
+  color: #fff;
+}
+
+.enso-btn.active {
+  background-color: #003f6b;
+  color: #fff;
+  border-color: #003f6b;
+}
+
+.enso-imagen img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.enso-mapa iframe {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .enso-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .enso-mapa iframe {
+    height: 420px;
+  }
+
+  .enso-btn {
+    flex: 1 1 100%;
+  }
+}
