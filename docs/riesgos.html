@@ -2,15 +2,104 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Evaluación de Riesgos Climáticos</title>
   <link rel="stylesheet" href="css/riesgos.css">
 </head>
 <body>
-  <header>
-    <h1>Evaluación de Riesgos Climáticos</h1>
+  <header class="encabezado">
+    <div class="logos">
+      <img src="img/bolivia_republic_vertical.png">
+      <img src="img/suecia_sverige_vertical.png">
+      <img src="img/sei_vertical.png">
+      <img src="img/bolivia_watch_vertical.png">
+    </div>
   </header>
-  <main>
-    <p>Explora los estudios y herramientas para evaluar los riesgos climáticos en Bolivia. Esta sección incluye mapas de vulnerabilidad, escenarios de cambio climático y estrategias de adaptación.</p>
-  </main>
+
+  <section class="banner">
+    <img src="img/balance wallpaper.jpg">
+    <div class="titulo-banner">
+      <h1>Estudios de Riesgos Climáticos<br>Bolivia Watch</h1>
+    </div>
+  </section>
+
+<section class="contenido">
+  <h2>Sobre el proyecto</h2>
+  <p>
+    El territorio nacional de Bolivia es vulnerable a eventos climáticos extremos como sequías e inundaciones. 
+    Un estudio del Ministerio de Planificación para el Desarrollo de Bolivia (MPD) y el Banco Mundial, 
+    realizado entre octubre de 2013 y mayo de 2014, cuantificó el impacto en diferentes sectores socioeconómicos. 
+    El sector pecuario fue el más afectado, representando el 58% del total del sector agropecuario, 
+    que a su vez constituyó el 61.7% del total de la afectación nacional. Otros sectores también sufrieron daños, 
+    especialmente el sector transporte (18%), debido a daños en carreteras. En 2013, Bolivia tuvo un crecimiento 
+    del PIB del 6.78% y un superávit en la balanza de pagos, pero los eventos climáticos impactaron en la producción, 
+    la inflación y las cuentas fiscales, requiriendo recursos para la rehabilitación y reconstrucción de las áreas afectadas.
+  </p>
+</section>  
+
+
+<section class="contenido">
+
+  <h2>Índices climáticos de Temperatura Superficial Oceánica (SST) y El Niño-Oscilación del Sur (ENSO)</h2>
+  <p>
+  Las anomalías en la Temperatura Superficial del Océano (SST) son vitales para comprender eventos climáticos extremos como las sequías. 
+  El índice de El Niño-Oscilación del Sur (ENSO) es especialmente importante, con El Niño y La Niña influyendo en los patrones de precipitación global. 
+  Aunque no todas las variaciones de SST están relacionadas con ENSO ni causan sequías, su monitoreo es esencial para anticipar y mitigar impactos climáticos adversos.
+  </p>
+ 
+<section class="panel-enso-global">
+
+  <div class="enso-layout">
+    <!-- Columna izquierda -->
+    <div class="enso-izquierda">
+      <!-- Simbología ENSO -->
+
+      <!-- Botones de índice y sequía -->
+      <div class="enso-botones"> 
+      <div class="enso-simbologia">
+       <ul>
+       <li><button class="enso-btn" data-img="sequia_hidrologica.png">Sequía hidrológica</button></li>
+       <li><button class="enso-btn" data-img="sequia_meteorologica.png">Sequía meteorológica</button></li>
+       <li><button class="enso-btn" data-img="sequia_agrometeorologica.png">Sequía agrometeorológica</button></li>
+       <li><button class="enso-btn" data-img="ONI.png">ONI</button></li>
+       <li><button class="enso-btn" data-img="SOI.png">SOI</button></li>
+       <li><button class="enso-btn" data-img="TNA.png">TNA</button></li>
+       <li><button class="enso-btn" data-img="TSA.png">TSA</button></li>
+      </ul>
+      </div>
+      </div>
+
+      <!-- Imagen explicativa -->
+      <div class="enso-imagen">
+        <img id="enso-descripcion" src="img/sequia_hidrologica.png" alt="Descripción ENSO">
+      </div>
+    </div>
+
+    <!-- Mapa mundial fijo -->
+    <div class="enso-mapa">
+      <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=sst_global" frameborder="0" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+</section>  
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.enso-btn');
+    const imagen = document.getElementById('enso-descripcion');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const img = btn.dataset.img;
+        imagen.src = `img/${img}`;
+        imagen.alt = `Descripción de ${btn.textContent}`;
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>

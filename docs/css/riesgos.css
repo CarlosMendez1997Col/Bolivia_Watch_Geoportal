@@ -1,25 +1,272 @@
+/* === Base general === */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  padding: 2rem;
 }
 
-header {
-  background-color: #0077c8;
+/* === Encabezado institucional === */
+.encabezado {
+  background-color: #ffffff;
+  padding: 1.5rem 3rem;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* === Banner principal === */
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 3% auto;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.titulo-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(239,177,43,0.7);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.titulo-banner h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/* === Contenido principal === */
+.contenido {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 1.5rem 1.75rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 8px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2rem;
+.contenido h2 {
+  font-size: 1.8rem;
+  color: #B54900;
+  margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
-main {
-  margin-top: 2rem;
+.contenido h2:hover {
+  text-decoration: underline;
+  color: #B54900;
+}
+
+.contenido p {
   font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* === Enlaces dentro del texto === */
+.contenido a {
+  color: #bd4e0c;
+  text-decoration: none;
+}
+
+.contenido a:hover {
+  text-decoration: underline;
+  color: #bd4e0c;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .panel-climatico {
+    grid-template-columns: 1fr;
+  }
+
+  .clima-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mapa-climatico iframe {
+    height: 420px;
+  }
+}
+
+/* === Responsivo para tablet y móvil === */
+@media (max-width: 768px) {
+  .encabezado {
+    padding: 1rem;
+  }
+
+  .logos img {
+    height: 40px;
+  }
+
+  .titulo-banner h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenido {
+    padding: 2rem 1rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.4rem;
+  }
+
+  .contenido p {
+    font-size: 0.95rem;
+  }
+
+  .botones-cuencas .boton-cuenca {
+    font-size: 0.95rem;
+    padding-left: 2.5rem;
+    background-position: 8px center;
+    background-size: 18px 18px;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .clima-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .clima-mapa iframe {
+    height: 420px;
+  }
+}
+
+
+.panel-enso-global {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+}
+
+.enso-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+}
+
+.enso-izquierda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.enso-simbologia h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.enso-simbologia ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enso-simbologia li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  display: inline-block;
+}
+
+.enso-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.enso-btn {
+  flex: 1 1 45%;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.enso-btn:hover {
+  background-color: #B54900;
+  color: #fff;
+}
+
+.enso-btn.active {
+  background-color: #B54900;
+  color: #fff;
+  border-color: #B54900;
+}
+
+.enso-imagen img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.enso-mapa iframe {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .enso-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .enso-mapa iframe {
+    height: 420px;
+  }
+
+  .enso-btn {
+    flex: 1 1 100%;
+  }
 }
