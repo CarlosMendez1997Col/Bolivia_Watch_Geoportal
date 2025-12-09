@@ -81,7 +81,6 @@
 </section>
 </section>  
 
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.enso-btn');
@@ -100,6 +99,64 @@
   });
 </script>
 
+
+<section class="panel-sequia-mensual">
+  <div class="sequia-layout">
+    <!-- Botonera vertical -->
+    <aside class="sequia-meses">
+      <h3>Frecuencia mensual de emergencia</h3>
+      <button class="mes-btn active" data-mes="enero">Enero</button>
+      <button class="mes-btn" data-mes="febrero">Febrero</button>
+      <button class="mes-btn" data-mes="marzo">Marzo</button>
+      <button class="mes-btn" data-mes="abril">Abril</button>
+      <button class="mes-btn" data-mes="mayo">Mayo</button>
+      <button class="mes-btn" data-mes="junio">Junio</button>
+      <button class="mes-btn" data-mes="julio">Julio</button>
+      <button class="mes-btn" data-mes="agosto">Agosto</button>
+      <button class="mes-btn" data-mes="septiembre">Septiembre</button>
+      <button class="mes-btn" data-mes="octubre">Octubre</button>
+      <button class="mes-btn" data-mes="noviembre">Noviembre</button>
+      <button class="mes-btn" data-mes="diciembre">Diciembre</button>
+    </aside>
+
+    <!-- Mapa dinámico -->
+    <div class="sequia-mapa">
+      <iframe id="mapa-sequia" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=enero" frameborder="0" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.mes-btn');
+    const mapa = document.getElementById('mapa-sequia');
+
+    const urls = {
+      enero: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=enero',
+      febrero: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=febrero',
+      marzo: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=marzo',
+      abril: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=abril',
+      mayo: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=mayo',
+      junio: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=junio',
+      julio: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=julio',
+      agosto: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=agosto',
+      septiembre: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=septiembre',
+      octubre: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=octubre',
+      noviembre: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=noviembre',
+      diciembre: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=diciembre'
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const mes = btn.dataset.mes;
+        mapa.src = urls[mes];
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
