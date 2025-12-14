@@ -1,3 +1,14 @@
+<!--*****************************************************************************************************************************************************-->
+<!--*****                                                        Bolivia Watch Geoportal                                                            *****-->
+<!--*****                                         Stockholm Environment Institute - Latin America (SEI-LA)                                          *****-->
+<!--*****                                              Copyright 2025, Stockholm Environment Institute                                              *****-->
+<!--*****                                            https://github.com/sei-latam/Bolivia_Watch_Geoportal                                           *****-->
+<!--*****                                            https://sei-latam.github.io/Bolivia_Watch_Geoportal/                                           *****-->
+<!--*****                                                                Riesgos.html                                                               *****-->
+<!--*****                                          Geoportal Developed by Carlos Mendez - Research Associate I                                      *****-->
+<!--*****                                                              Apache-2.0 license                                                           *****-->
+<!--*****************************************************************************************************************************************************-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -238,6 +249,157 @@
   });
 </script>
 
+
+<section class="contenido">
+  <h2>Eventos de sequía agrometeorológica [SPEI]</h2>
+
+<section class="panel-sequia-spei">
+  <div class="spei-layout">
+    <!-- Panel izquierdo: controles + mensaje -->
+    <aside class="spei-controles">
+      <div class="spei-navegacion">
+        <button id="spei-prev">⟨</button>
+        <button id="spei-next">⟩</button>
+      </div>
+      <div class="spei-mensaje" id="spei-mensaje">
+        <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
+      </div>
+    </aside>
+
+    <!-- Panel derecho: mapa -->
+    <div class="spei-mapa">
+      <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const speiMapa = document.getElementById('spei-mapa');
+    const speiMensaje = document.getElementById('spei-mensaje');
+    const speiBtnPrev = document.getElementById('spei-prev');
+    const speiBtnNext = document.getElementById('spei-next');
+
+    const speiCapas = [
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1',
+        texto: 'Visualizando categoría 1: Total de eventos entre 390 y 396.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei2',
+        texto: 'Visualizando categoría 2: Eventos entre 396 y 401.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei3',
+        texto: 'Visualizando categoría 3: Eventos entre 401 y 406.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei4',
+        texto: 'Visualizando categoría 4: Eventos entre 406 y 419.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei5',
+        texto: 'Visualizando categoría 5: Eventos entre 419 y 480.'
+      }
+    ];
+
+    let speiIndice = 0;
+
+    const actualizarSpeiPanel = () => {
+      speiMapa.src = speiCapas[speiIndice].url;
+      speiMensaje.innerHTML = `<p>${speiCapas[speiIndice].texto}</p>`;
+    };
+
+    speiBtnPrev.addEventListener('click', () => {
+      speiIndice = (speiIndice - 1 + speiCapas.length) % speiCapas.length;
+      actualizarSpeiPanel();
+    });
+
+    speiBtnNext.addEventListener('click', () => {
+      speiIndice = (speiIndice + 1) % speiCapas.length;
+      actualizarSpeiPanel();
+    });
+
+    actualizarSpeiPanel();
+  });
+</script>
+
+
+<section class="contenido">
+  <h2>índice Combinado de sequía</h2>
+
+<section class="panel-sequia-spei">
+  <div class="spei-layout">
+    <!-- Panel izquierdo: controles + mensaje -->
+    <aside class="spei-controles">
+      <div class="spei-navegacion">
+        <button id="spei-prev">⟨</button>
+        <button id="spei-next">⟩</button>
+      </div>
+      <div class="spei-mensaje" id="spei-mensaje">
+        <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
+      </div>
+    </aside>
+
+    <!-- Panel derecho: mapa -->
+    <div class="spei-mapa">
+      <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const speiMapa = document.getElementById('spei-mapa');
+    const speiMensaje = document.getElementById('spei-mensaje');
+    const speiBtnPrev = document.getElementById('spei-prev');
+    const speiBtnNext = document.getElementById('spei-next');
+
+    const speiCapas = [
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1',
+        texto: 'Visualizando categoría 1: Total de eventos entre 390 y 396.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei2',
+        texto: 'Visualizando categoría 2: Eventos entre 396 y 401.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei3',
+        texto: 'Visualizando categoría 3: Eventos entre 401 y 406.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei4',
+        texto: 'Visualizando categoría 4: Eventos entre 406 y 419.'
+      },
+      {
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei5',
+        texto: 'Visualizando categoría 5: Eventos entre 419 y 480.'
+      }
+    ];
+
+    let speiIndice = 0;
+
+    const actualizarSpeiPanel = () => {
+      speiMapa.src = speiCapas[speiIndice].url;
+      speiMensaje.innerHTML = `<p>${speiCapas[speiIndice].texto}</p>`;
+    };
+
+    speiBtnPrev.addEventListener('click', () => {
+      speiIndice = (speiIndice - 1 + speiCapas.length) % speiCapas.length;
+      actualizarSpeiPanel();
+    });
+
+    speiBtnNext.addEventListener('click', () => {
+      speiIndice = (speiIndice + 1) % speiCapas.length;
+      actualizarSpeiPanel();
+    });
+
+    actualizarSpeiPanel();
+  });
+</script>
 
 </body>
 </html>
