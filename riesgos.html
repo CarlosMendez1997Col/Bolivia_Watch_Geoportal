@@ -121,26 +121,24 @@
 <section class="content">
   <h2>Reporte de emergencia de sequía por municipio emitido por VIDECI [2002 - 2022]</h2>
 
-  <section class="panel-sequia-mensual">
-    <div class="sequia-layout">
-      <!-- Botonera vertical -->
-      <aside class="sequia-meses">
-        <h3>Frecuencia mensual de emergencia</h3>
-        <button class="mes-btn active" data-mes="enero">Enero</button>
-        <button class="mes-btn" data-mes="febrero">Febrero</button>
-        <button class="mes-btn" data-mes="marzo">Marzo</button>
-        <button class="mes-btn" data-mes="abril">Abril</button>
-        <button class="mes-btn" data-mes="mayo">Mayo</button>
-        <button class="mes-btn" data-mes="junio">Junio</button>
-        <button class="mes-btn" data-mes="julio">Julio</button>
-        <button class="mes-btn" data-mes="agosto">Agosto</button>
-        <button class="mes-btn" data-mes="septiembre">Septiembre</button>
-        <button class="mes-btn" data-mes="octubre">Octubre</button>
-        <button class="mes-btn" data-mes="noviembre">Noviembre</button>
-        <button class="mes-btn" data-mes="diciembre">Diciembre</button>
+  <section class="panel-drought-monthly">
+    <div class="drought-layout">
+      <aside class="drought-months">
+        <button class="month-btn active" data-mes="enero">Enero</button>
+        <button class="month-btn" data-mes="febrero">Febrero</button>
+        <button class="month-btn" data-mes="marzo">Marzo</button>
+        <button class="month-btn" data-mes="abril">Abril</button>
+        <button class="month-btn" data-mes="mayo">Mayo</button>
+        <button class="month-btn" data-mes="junio">Junio</button>
+        <button class="month-btn" data-mes="julio">Julio</button>
+        <button class="month-btn" data-mes="agosto">Agosto</button>
+        <button class="month-btn" data-mes="septiembre">Septiembre</button>
+        <button class="month-btn" data-mes="octubre">Octubre</button>
+        <button class="month-btn" data-mes="noviembre">Noviembre</button>
+        <button class="month-btn" data-mes="diciembre">Diciembre</button>
       </aside>
-      <div class="sequia-mapa">
-        <iframe id="mapa-sequia" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=enero" frameborder="0" loading="lazy"></iframe>
+      <div class="drought-map">
+        <iframe id="map-drought" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=enero" frameborder="0" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -152,8 +150,8 @@
 <!---------------------------------------------Start script to update map 'Reporte sequia VIDECI'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.mes-btn');
-    const mapa = document.getElementById('mapa-sequia');
+    const buttons = document.querySelectorAll('.month-btn');
+    const mapa = document.getElementById('map-drought');
     const urls = {
       enero: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=enero',
       febrero: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=febrero',
