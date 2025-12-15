@@ -9,7 +9,7 @@
 /*=====                                                              Apache-2.0 license                                                           =====*/
 /*=====================================================================================================================================================*/
  
-/* === FUENTE INTER DESDE GOOGLE FONTS === */
+/* === Import google fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-/* === PANEL IZQUIERDO === */
+/********************************************Start Left Panel*****************************************************/
 .panel-izquierdo {
   width: 4%;
   background-color: #f5f5f5;
@@ -47,7 +47,10 @@ body {
   margin-top: 1rem;
 }
 
-/* === PANEL CENTRAL === */
+/********************************************End Left Panel*****************************************************/
+
+
+/*******************************************Start Central Panel*****************************************************/
 .panel-central {
   width: 41%;
   position: relative;
@@ -119,6 +122,9 @@ body {
 .logos-central img {
   max-height: 85px;
 }
+
+/*******************************************End Central Panel*****************************************************/
+
 
 /* === PANEL DERECHO === */
 .panel-derecho {

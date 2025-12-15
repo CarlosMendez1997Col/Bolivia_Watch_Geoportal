@@ -11,11 +11,15 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/balance.css">
+    <link rel="stylesheet" href="css/balance.css"><!--******************************************* Reference with balance.css -->
 </head>
+
+<!--------------------------------------------------------------   Start Body  ---------------------------------------------------------------------------------->
 <body>
+  <!--*******************************************Start header class*****************************************************-->
   <header class="encabezado">
     <div class="logos">
       <img src="img/bolivia_republic_vertical.png">
@@ -24,182 +28,181 @@
       <img src="img/bolivia_watch_vertical.png">
     </div>
   </header>
-
+  <!--*******************************************End header class*****************************************************-->
+  
+  <!---------------------------------------------Start titulo section------------------------------------------------------->
   <section class="banner">
     <img src="img/balance wallpaper.jpg">
-    <div class="titulo-banner">
-      <h1>Actualización del Balance<br>Hídrico Nacional<br>Bolivia Watch</h1>
+      <div class="titulo-banner">
+        <h1>Actualización del Balance<br>Hídrico Nacional<br>Bolivia Watch</h1>
+      </div>
+  </section>
+  <!---------------------------------------------End titulo section------------------------------------------------------->
+
+  <!---------------------------------------------Start fisrt interface ------------------------------------------------------->
+  <section class="contenido">
+    <h2>Sobre el proyecto</h2>
+      <p>
+        La evaluación del balance hídrico nacional en Bolivia es una prioridad del Estado para determinar la disponibilidad actual de agua en todas las regiones del país, 
+        para su desarrollo socioeconómico en concordancia con un adecuado uso y distribución del agua en el territorio. Desde 1992, se han realizado varias actualizaciones 
+        del Balance Hídrico, con el objetivo de desarrollar una línea base (1992) y herramientas para mejorar la toma de decisiones (2012 y 2018). Estos estudios permitieron 
+        estimar la situación hídrica del país a través de diferentes metodologías de cálculo. La actualización del Balance Hídrico de Bolivia en 2018 contó con la participación 
+        de investigadores del SEI, el Servicio Nacional de Meteorología e Hidrología de Bolivia (SENNAMHI) y varias instituciones académicas con experiencia en la caracterización 
+        hidrológica del territorio boliviano.
+      </p>
+    <div class="botones-cuencas">
+      <a href="https://www.sei.org/projects/balance-hidrico-bolivia-2023/" class="boton-cuenca">
+        Conozca más acerca del trabajo de SEI en la Actualización del Balance Hídrico (2023)
+      </a>
     </div>
   </section>
+  <!---------------------------------------------End first section------------------------------------------------------->
 
-<section class="contenido">
-  <h2>Sobre el proyecto</h2>
-  <p>
-    La evaluación del balance hídrico nacional en Bolivia es una prioridad del Estado para determinar la disponibilidad actual de agua en todas las regiones del país, 
-    para su desarrollo socioeconómico en concordancia con un adecuado uso y distribución del agua en el territorio. Desde 1992, se han realizado varias actualizaciones 
-    del Balance Hídrico, con el objetivo de desarrollar una línea base (1992) y herramientas para mejorar la toma de decisiones (2012 y 2018). Estos estudios permitieron 
-    estimar la situación hídrica del país a través de diferentes metodologías de cálculo. La actualización del Balance Hídrico de Bolivia en 2018 contó con la participación 
-    de investigadores del SEI, el Servicio Nacional de Meteorología e Hidrología de Bolivia (SENNAMHI) y varias instituciones académicas con experiencia en la caracterización 
-    hidrológica del territorio boliviano.
-  </p>
-  <div class="botones-cuencas">
-    <a href="https://www.sei.org/projects/balance-hidrico-bolivia-2023/" class="boton-cuenca">
-      Conozca más acerca del trabajo de SEI en la Actualización del Balance Hídrico (2023)
-    </a>
-  </div>
-</section>
+  <!---------------------------------------------Start five options section------------------------------------------------------->
+  <section class="contenido">
+    <h2>Área de estudio</h2>
+      <p>
+        El estudio de Balance Hídrico de Bolivia [BHB] brinda una descripción de las condiciones climáticas, hidrológicas y en este caso se suman las condiciones hidrogeológicas 
+        del territorio. Como los estudios antecesores, se reconoce que el territorio nacional presenta condiciones climáticas altamente variadas en extensión y escala espacial, 
+        lo que hacen altamente complejo el cubrir con toda esta diversidad de condiciones. Para ello, el estudio desarrolló un enfoque de reporte gradual en función a la 
+        consolidación del monitoreo local, regional y nacional para caracterizar cada uno de los detalles del balance hídrico en el país y mejorar gradualmente la 
+        representación de todas las condiciones hidrológicas y climáticas en el territorio.
+      </p>
 
-<section class="contenido">
-  <h2>Área de estudio</h2>
-  <p>
-    El estudio de Balance Hídrico de Bolivia [BHB] brinda una descripción de las condiciones climáticas, hidrológicas y en este caso se suman las condiciones hidrogeológicas 
-    del territorio. Como los estudios antecesores, se reconoce que el territorio nacional presenta condiciones climáticas altamente variadas en extensión y escala espacial, 
-    lo que hacen altamente complejo el cubrir con toda esta diversidad de condiciones. Para ello, el estudio desarrolló un enfoque de reporte gradual en función a la 
-    consolidación del monitoreo local, regional y nacional para caracterizar cada uno de los detalles del balance hídrico en el país y mejorar gradualmente la 
-    representación de todas las condiciones hidrológicas y climáticas en el territorio.
-  </p>
+      <!---------------------------------------------Start menu-option section------------------------------------------------------->
+      <section class="balance-layout">
+        <aside class="balance-sidebar">
+          <button class="tab-btn active" data-tab="estudio">El área de estudio</button>
+          <button class="tab-btn" data-tab="unidades">Unidades Hidrográficas</button>
+          <button class="tab-btn" data-tab="endorreica">Región Endorreica</button>
+          <button class="tab-btn" data-tab="plata">Región del Plata</button>
+          <button class="tab-btn" data-tab="amazonas">Región del Amazonas</button>
+        </aside>
 
-  <section class="balance-layout">
-    <!-- Sidebar de navegación -->
-    <aside class="balance-sidebar">
-      <button class="tab-btn active" data-tab="estudio">El área de estudio</button>
-      <button class="tab-btn" data-tab="unidades">Unidades Hidrográficas</button>
-      <button class="tab-btn" data-tab="endorreica">Región Endorreica</button>
-      <button class="tab-btn" data-tab="plata">Región del Plata</button>
-      <button class="tab-btn" data-tab="amazonas">Región del Amazonas</button>
-    </aside>
-
-    <!-- Contenido principal -->
+    <!---------------------------------------------Start first option class------------------------------------------------------->
     <main class="balance-contenido">
-      <!-- Panel: El área de estudio -->
       <section class="tab-panel active" id="panel-estudio">
-        <div class="panel-header">
-          <h2>El área de estudio</h2>
-        </div>
+            <div class="panel-header">
+              <h2>El área de estudio</h2>
+            </div>
         <div class="panel-body">
-          <div class="panel-texto">
-            <p>
-              La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
-              y el límite político del país. De forma oficial el continente sudamericano está constituido en el nivel 1 [método Pfafstetter de 1989], por 10 unidades o regiones 
-              hidrográficas de las cuales, las regiones 0 [Región Endorreica], 4 [Región del Amazonas] y 8 [Región del Plata] del nivel 1 cuentan con superficie en territorio 
-              de Bolivia
-            </p>
-          </div>
+            <div class="panel-texto">
+              <p>
+                La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
+                y el límite político del país. De forma oficial el continente sudamericano está constituido en el nivel 1 [método Pfafstetter de 1989], por 10 unidades o regiones 
+                hidrográficas de las cuales, las regiones 0 [Región Endorreica], 4 [Región del Amazonas] y 8 [Región del Plata] del nivel 1 cuentan con superficie en territorio 
+                de Bolivia
+              </p>
+            </div>
           <div class="panel-mapa">
-            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center= -63,-16&level=5"
-                    frameborder="0" loading="lazy"></iframe>
+                  <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center= -63,-16&level=5" frameborder="0" loading="lazy"></iframe>
             <div class="panel-leyenda">
-              <span class="leyenda-item"><span class="punto azul"></span> Capital municipal</span>
-              <span class="leyenda-item"><span class="linea negra"></span> Límite municipal</span>
+                  <span class="leyenda-item"><span class="punto azul"></span> Capital municipal</span>
+                  <span class="leyenda-item"><span class="linea negra"></span> Límite municipal</span>
             </div>
           </div>
         </div>
       </section>
+    <!---------------------------------------------End first option class------------------------------------------------------->
+      
+      <!---------------------------------------------Start second option class------------------------------------------------------->
+        <section class="tab-panel" id="panel-unidades">
+          <div class="panel-header">
+            <h2>Unidades Hidrográficas</h2>
+          </div>
+          <div class="panel-body">
+            <div class="panel-texto">
+              <p>
+                Teniendo en cuenta el contexto existente en el país para la delimitación de unidades hidrográficas se definieron como unidades de reportes las 51 Unidades Hidrográficas 
+                de Información (UHI) priorizadas en la actual Política Nacional del Agua dado que presentan interés estratégico. Sin embargo, el modelo del sistema de recursos 
+                hídricos se construyó en función de las 170 Unidades Hidrográficas de Gestión (UHG) que resultarían ser la unidad de análisis en las Unidades de Gestión de 
+                Cuenca distribuidas en las tres zonas hidrográficas.
+              </p>
+            </div>
+            <div class="panel-mapa">
+              <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-16&level=5" frameborder="0" loading="lazy"></iframe>
+            </div>
+          </div>
+        </section>
+      <!---------------------------------------------End second option class------------------------------------------------------->
 
-      <!-- Panel: Unidades Hidrográficas -->
-      <section class="tab-panel" id="panel-unidades">
-        <div class="panel-header">
-          <h2>Unidades Hidrográficas</h2>
-        </div>
-        <div class="panel-body">
-          <div class="panel-texto">
-            <p>
-              Teniendo en cuenta el contexto existente en el país para la delimitación de unidades hidrográficas se definieron como unidades de reportes las 51 Unidades Hidrográficas 
-              de Información (UHI) priorizadas en la actual Política Nacional del Agua dado que presentan interés estratégico. Sin embargo, el modelo del sistema de recursos 
-              hídricos se construyó en función de las 170 Unidades Hidrográficas de Gestión (UHG) que resultarían ser la unidad de análisis en las Unidades de Gestión de 
-              Cuenca distribuidas en las tres zonas hidrográficas.
-            </p>
-          </div>
-          <div class="panel-mapa">
-            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-16&level=5"
-                    frameborder="0" loading="lazy"></iframe>
-          </div>
-        </div>
-      </section>
+          <!---------------------------------------------Start third class------------------------------------------------------->
+          <section class="tab-panel" id="panel-endorreica">
+            <div class="panel-header">
+              <h2>Región Endorreica</h2>
+            </div>
+            <div class="panel-body">
+              <div class="panel-texto">
+                <p>
+                  La región hidrográfica endorreica se constituye de 326 032 km2 de superficie distribuidos en una seria de sistemas cerrados cuyos puntos de acumulación 
+                  son mayormente Lagos y Salares de la planicie continental formada por la cordillera de los Andes, los dos cuerpos de agua más representativos de esta 
+                  región son el Lago Titicaca [8 372 km2 de superficie] y el Salar de Uyuni [10 580 km2 de superficie], esta región está conformado por territorio de 
+                  Perú, Chile, Argentina y Bolivia la cual cuenta con 151 722 km2 [46.53%] de esta región hidrográfica. 
+                </p>
+              </div>
+              <div class="panel-mapa">
+                <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-67,-19&level=6" frameborder="0" loading="lazy"></iframe>
+              </div>
+            </div>
+          </section>
+            <!---------------------------------------------End third class------------------------------------------------------->
 
-      <!-- Panel: Región Endorreica -->
-      <section class="tab-panel" id="panel-endorreica">
-        <div class="panel-header">
-          <h2>Región Endorreica</h2>
-        </div>
-        <div class="panel-body">
-          <div class="panel-texto">
-            <p>
-              La región hidrográfica endorreica se constituye de 326 032 km2 de superficie distribuidos en una seria de sistemas cerrados cuyos puntos de acumulación 
-              son mayormente Lagos y Salares de la planicie continental formada por la cordillera de los Andes, los dos cuerpos de agua más representativos de esta 
-              región son el Lago Titicaca [8 372 km2 de superficie] y el Salar de Uyuni [10 580 km2 de superficie], esta región está conformado por territorio de 
-              Perú, Chile, Argentina y Bolivia la cual cuenta con 151 722 km2 [46.53%] de esta región hidrográfica. 
-            </p>
-          </div>
-          <div class="panel-mapa">
-            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-67,-19&level=6"
-                    frameborder="0" loading="lazy"></iframe>
-          </div>
-        </div>
-      </section>
+              <!---------------------------------------------Start fourth class------------------------------------------------------->
+              <section class="tab-panel" id="panel-plata">
+                  <div class="panel-header">
+                    <h2>Región del Plata</h2>
+                  </div>
+                  <div class="panel-body">
+                    <div class="panel-texto">
+                      <p>
+                        Es la segunda zona de aporte más grande con una extensión de 4.14 millones de km2, distribuido entre Brasil, Paraguay, Uruguay Argentina y Bolivia, 
+                        la cual cuenta con 225 492 km2 [5.45%] de aporte a esta macrorregión.
+                      </p>
+                    </div>
+                        <div class="panel-mapa">
+                          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-60,-19&level=6"frameborder="0" loading="lazy"></iframe>
+                        </div>
+                  </div>
+              </section>
+                <!---------------------------------------------End fourth class------------------------------------------------------->
+ 
+                  <!---------------------------------------------Start five class------------------------------------------------------->
+                      <section class="tab-panel" id="panel-amazonas">
+                          <div class="panel-header">
+                            <h2>Región del Amazonas</h2>
+                          </div>
+                          <div class="panel-body">
+                            <div class="panel-texto">
+                              <p>
+                                Es la zona de aporte más grande del mundo con unos 6.14 millones de km2, cuenta con superficie extendida en Brasil, Venezuela, Guyana, Colombia, Ecuador, 
+                                Perú y Bolivia la cual aporta con 720 792 km2 [11.73%] en extensión.
+                              </p>
+                            </div>
+                            <div class="panel-mapa">
+                              <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-13&level=6"frameborder="0" loading="lazy"></iframe>
+                            </div>
+                          </div>
+                      </section>
+                       <!---------------------------------------------End five class------------------------------------------------------->
+    </main>   <!---------------------------------------------End first option class------------------------------------------------------->
+  </section><!---------------------------------------------End menu-option section------------------------------------------------------->
+</section><!---------------------------------------------End five options section----------------------------------------------------->
 
-      <!-- Panel: Región del Plata -->
-      <section class="tab-panel" id="panel-plata">
-        <div class="panel-header">
-          <h2>Región del Plata</h2>
-        </div>
-        <div class="panel-body">
-          <div class="panel-texto">
-            <p>
-              Es la segunda zona de aporte más grande con una extensión de 4.14 millones de km2, distribuido entre Brasil, Paraguay, Uruguay Argentina y Bolivia, 
-              la cual cuenta con 225 492 km2 [5.45%] de aporte a esta macrorregión.
-            </p>
-          </div>
-          <div class="panel-mapa">
-            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-60,-19&level=6"
-                    frameborder="0" loading="lazy"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <!-- Panel: Región del Amazonas -->
-      <section class="tab-panel" id="panel-amazonas">
-        <div class="panel-header">
-          <h2>Región del Amazonas</h2>
-        </div>
-        <div class="panel-body">
-          <div class="panel-texto">
-            <p>
-              Es la zona de aporte más grande del mundo con unos 6.14 millones de km2, cuenta con superficie extendida en Brasil, Venezuela, Guyana, Colombia, Ecuador, 
-              Perú y Bolivia la cual aporta con 720 792 km2 [11.73%] en extensión.
-            </p>
-          </div>
-          <div class="panel-mapa">
-            <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-13&level=6"
-                    frameborder="0" loading="lazy"></iframe>
-          </div>
-        </div>
-      </section>
-    </main>
-  </section>
-</section>
-
+<!---------------------------------------------Start script to update map----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.tab-panel');
-
     const showPanel = (tab) => {
-      // botones
-      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tab));
-      // paneles
-      panels.forEach(panel => panel.classList.toggle('active', panel.id === `panel-${tab}`));
-    };
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => showPanel(btn.dataset.tab));
-    });
-
-    // Inicial: mostrar “El área de estudio”
-    showPanel('estudio');
+                                buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tab)); // buttoms
+                                panels.forEach(panel => panel.classList.toggle('active', panel.id === `panel-${tab}`));// panels
+                                };
+    buttons.forEach(btn => {btn.addEventListener('click', () => showPanel(btn.dataset.tab));
+                            });
+    showPanel('estudio');// Set initial window “El área de estudio”
   });
 </script>
-
+<!---------------------------------------------End script to update map----------------------------------------------------->
 
 <section class="contenido">
   <h2>Información climática y biofísica</h2>
