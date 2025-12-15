@@ -13,9 +13,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/riesgos.css">
+  <link rel="stylesheet" href="css/riesgos.css"><!--******************************************* Reference with riesgos.css -->
 </head>
+
+<!--------------------------------------------------------------   Start Body  ---------------------------------------------------------------------------------->
 <body>
+   <!--*******************************************Start header class*****************************************************--> 
   <header class="encabezado">
     <div class="logos">
       <img src="img/bolivia_republic_vertical.png">
@@ -24,14 +27,18 @@
       <img src="img/bolivia_watch_vertical.png">
     </div>
   </header>
+  <!--*******************************************End header class*****************************************************-->
 
+  <!---------------------------------------------Start titulo section------------------------------------------------------->  
   <section class="banner">
     <img src="img/balance wallpaper.jpg">
     <div class="titulo-banner">
       <h1>Estudios de Riesgos Climáticos<br>Bolivia Watch</h1>
     </div>
   </section>
+  <!---------------------------------------------End titulo section------------------------------------------------------->
 
+<!---------------------------------------------Start section 'Sobre el proyecto' ------------------------------------------------------->
 <section class="contenido">
   <h2>Sobre el proyecto</h2>
   <p>
@@ -45,51 +52,44 @@
     la inflación y las cuentas fiscales, requiriendo recursos para la rehabilitación y reconstrucción de las áreas afectadas.
   </p>
 </section>  
+  <!---------------------------------------------End section 'Sobre el proyecto'------------------------------------------------------->
 
 
 <section class="contenido">
-
   <h2>Índices climáticos de Temperatura Superficial Oceánica (SST) y El Niño-Oscilación del Sur (ENSO)</h2>
-  <p>
-  Las anomalías en la Temperatura Superficial del Océano (SST) son vitales para comprender eventos climáticos extremos como las sequías. 
-  El índice de El Niño-Oscilación del Sur (ENSO) es especialmente importante, con El Niño y La Niña influyendo en los patrones de precipitación global. 
-  Aunque no todas las variaciones de SST están relacionadas con ENSO ni causan sequías, su monitoreo es esencial para anticipar y mitigar impactos climáticos adversos.
-  </p>
+    <p>
+    Las anomalías en la Temperatura Superficial del Océano (SST) son vitales para comprender eventos climáticos extremos como las sequías. 
+    El índice de El Niño-Oscilación del Sur (ENSO) es especialmente importante, con El Niño y La Niña influyendo en los patrones de precipitación global. 
+    Aunque no todas las variaciones de SST están relacionadas con ENSO ni causan sequías, su monitoreo es esencial para anticipar y mitigar impactos climáticos adversos.
+    </p>
  
-<section class="panel-enso-global">
+  <section class="panel-enso-global">
+    <div class="enso-layout">
+      <div class="enso-izquierda">
+        <div class="enso-botones"> 
+          <div class="enso-simbologia">
+            <ul>
+              <li><button class="enso-btn" data-img="sequia_hidrologica.png">Sequía hidrológica</button></li>
+              <li><button class="enso-btn" data-img="sequia_meteorologica.png">Sequía meteorológica</button></li>
+              <li><button class="enso-btn" data-img="sequia_agrometeorologica.png">Sequía agrometeorológica</button></li>
+              <li><button class="enso-btn" data-img="ONI.png">ONI</button></li>
+              <li><button class="enso-btn" data-img="SOI.png">SOI</button></li>
+              <li><button class="enso-btn" data-img="TNA.png">TNA</button></li>
+              <li><button class="enso-btn" data-img="TSA.png">TSA</button></li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="enso-layout">
-    <!-- Columna izquierda -->
-    <div class="enso-izquierda">
-      <!-- Simbología ENSO -->
-
-      <!-- Botones de índice y sequía -->
-      <div class="enso-botones"> 
-      <div class="enso-simbologia">
-       <ul>
-       <li><button class="enso-btn" data-img="sequia_hidrologica.png">Sequía hidrológica</button></li>
-       <li><button class="enso-btn" data-img="sequia_meteorologica.png">Sequía meteorológica</button></li>
-       <li><button class="enso-btn" data-img="sequia_agrometeorologica.png">Sequía agrometeorológica</button></li>
-       <li><button class="enso-btn" data-img="ONI.png">ONI</button></li>
-       <li><button class="enso-btn" data-img="SOI.png">SOI</button></li>
-       <li><button class="enso-btn" data-img="TNA.png">TNA</button></li>
-       <li><button class="enso-btn" data-img="TSA.png">TSA</button></li>
-      </ul>
+        <div class="enso-imagen">
+          <img id="enso-descripcion" src="img/sequia_hidrologica.png" alt="Descripción ENSO">
+        </div>
       </div>
-      </div>
 
-      <!-- Imagen explicativa -->
-      <div class="enso-imagen">
-        <img id="enso-descripcion" src="img/sequia_hidrologica.png" alt="Descripción ENSO">
+      <div class="enso-mapa">
+        <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=sst_global" frameborder="0" loading="lazy"></iframe>
       </div>
     </div>
-
-    <!-- Mapa mundial fijo -->
-    <div class="enso-mapa">
-      <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=sst_global" frameborder="0" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
+  </section>
 </section>  
 
 <script>
@@ -109,6 +109,12 @@
     });
   });
 </script>
+
+
+
+
+
+
 
 <section class="contenido">
   <h2>Reporte de emergencia de sequía por municipio emitido por VIDECI [2002 - 2022]</h2>
@@ -139,6 +145,11 @@
   </div>
 </section>
 </section>
+
+
+
+
+
 
 
 <script>
@@ -172,6 +183,10 @@
     });
   });
 </script>
+
+
+
+
 
 <section class="contenido">
   <h2>Eventos de sequía meteorológica [SPI]</h2>
@@ -250,6 +265,12 @@
 </script>
 
 
+
+
+
+
+
+
 <section class="contenido">
   <h2>Eventos de sequía agrometeorológica [SPEI]</h2>
 
@@ -324,6 +345,8 @@
     actualizarSpeiPanel();
   });
 </script>
+
+
 
 
 <section class="contenido">
