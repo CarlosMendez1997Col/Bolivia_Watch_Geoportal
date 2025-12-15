@@ -184,19 +184,19 @@
 <!---------------------------------------------Start section 'Sequia SPI' ------------------------------------------------------->
 <section class="content">
   <h2>Eventos de sequía meteorológica [SPI]</h2>
-    <section class="panel-sequia-spei">
-      <div class="spei-layout">
-        <aside class="spei-controles">
-          <div class="spei-navegacion">
-            <button id="spei-prev">⟨</button>
-            <button id="spei-next">⟩</button>
+    <section class="panel-drought-spi">
+      <div class="spi-layout">
+        <aside class="spi-controls">
+          <div class="spi-navigation">
+            <button id="spi-prev">⟨</button>
+            <button id="spi-next">⟩</button>
           </div>
-          <div class="spei-mensaje" id="spei-mensaje">
+          <div class="spi-message" id="spi-message">
             <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
           </div>
         </aside>
-        <div class="spei-mapa">
-          <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
+        <div class="spi-map">
+          <iframe id="spi-map" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spi" frameborder="0" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -208,46 +208,46 @@
 <!---------------------------------------------Start script to update map 'Reporte sequia SPI'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const speiMapa = document.getElementById('spei-mapa');
-    const speiMensaje = document.getElementById('spei-mensaje');
-    const speiBtnPrev = document.getElementById('spei-prev');
-    const speiBtnNext = document.getElementById('spei-next');
-    const speiCapas = [
+    const spiMap = document.getElementById('spi-map');
+    const spiMessage = document.getElementById('spi-message');
+    const spiBtnPrev = document.getElementById('spi-prev');
+    const spiBtnNext = document.getElementById('spi-next');
+    const spiCapas = [
       {
-        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1',
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spi1',
         texto: 'Visualizando categoría 1: Total de eventos entre 390 y 396.'
       },
       {
-        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei2',
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spi2',
         texto: 'Visualizando categoría 2: Eventos entre 396 y 401.'
       },
       {
-        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei3',
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spi3',
         texto: 'Visualizando categoría 3: Eventos entre 401 y 406.'
       },
       {
-        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei4',
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spi4',
         texto: 'Visualizando categoría 4: Eventos entre 406 y 419.'
       },
       {
-        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei5',
+        url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spi5',
         texto: 'Visualizando categoría 5: Eventos entre 419 y 480.'
       }
     ];
-    let speiIndice = 0;
-    const actualizarSpeiPanel = () => {
-      speiMapa.src = speiCapas[speiIndice].url;
-      speiMensaje.innerHTML = `<p>${speiCapas[speiIndice].texto}</p>`;
+    let spiIndice = 0;
+    const actualizarSpiPanel = () => {
+      spiMap.src = spiCapas[spiIndice].url;
+      speiMessage.innerHTML = `<p>${spiCapas[spiIndice].texto}</p>`;
     };
-    speiBtnPrev.addEventListener('click', () => {
-      speiIndice = (speiIndice - 1 + speiCapas.length) % speiCapas.length;
-      actualizarSpeiPanel();
+    spiBtnPrev.addEventListener('click', () => {
+      spiIndice = (spiIndice - 1 + spiCapas.length) % spiCapas.length;
+      actualizarSpiPanel();
     });
-    speiBtnNext.addEventListener('click', () => {
-      speiIndice = (speiIndice + 1) % speiCapas.length;
-      actualizarSpeiPanel();
+    spiBtnNext.addEventListener('click', () => {
+      spiIndice = (spiIndice + 1) % spiCapas.length;
+      actualizarSpiPanel();
     });
-    actualizarSpeiPanel();
+    actualizarSpiPanel();
   });
 </script>
 <!---------------------------------------------End script to update map 'Reporte sequia SPI'----------------------------------------------------->
