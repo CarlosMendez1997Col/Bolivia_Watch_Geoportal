@@ -28,7 +28,7 @@ body {
 }
 
 /********************************************Start Left Panel*****************************************************/
-.panel-izquierdo {
+.panel-left {
   width: 4%;
   background-color: #f5f5f5;
   padding: 1.5rem;
@@ -62,7 +62,7 @@ body {
   padding: 2rem;
 }
 
-.contenido-central {
+.content-central {
   position: relative;
   z-index: 1;
   display: flex;
@@ -70,7 +70,7 @@ body {
   justify-content: center;
 }
 
-.texto-institucional {
+.text-institutional {
   background-color: rgba(223, 221, 221, 0.95);
   padding: 1.5rem;
   border-radius: 10px;
@@ -80,14 +80,14 @@ body {
   margin-bottom: 2rem;
 }
 
-.botones-tematicos {
+.buttoms-tematics {
   display: flex;
   flex-direction: column;
   text-align: justify;
   gap: 1rem;
 }
 
-.boton-tema {
+.buttom-tematic {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -103,12 +103,12 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.boton-tema img {
+.buttom-tematic img {
   height: 85px;
   width: auto;
 }
 
-.boton-tema:hover {
+.buttom-tematic:hover {
   background-color: #005fa3;
 }
 
@@ -127,20 +127,20 @@ body {
 
 
 /* === PANEL DERECHO === */
-.panel-derecho {
+.panel-right {
   width: 55%;
   position: relative;
   overflow: hidden;
 }
 
-.imagen-fondo {
+.image-wallpaper {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.85);
 }
 
-.overlay-titulo {
+.overlay-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -152,18 +152,18 @@ body {
   text-align: center;
 }
 
-.overlay-titulo h1 {
+.overlay-title h1 {
   margin: 0;
   font-size: 2rem;
   line-height: 1.3;
 }
 
-.logo-superior {
+.logo-upper {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
-.logo-superior img {
+.logo-upper img {
   max-width: 150px;
 }

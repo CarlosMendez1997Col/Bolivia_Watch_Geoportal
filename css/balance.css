@@ -9,8 +9,10 @@
 /*=====                                                              Apache-2.0 license                                                           =====*/
 /*=====================================================================================================================================================*/
 
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------   Start Main  ------------------------------------------------------------------------*/
+/*=====================================================================================================================================================*/
 
-/* === Base general === */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -18,12 +20,14 @@ body {
   color: #333;
 }
 
-/* === Encabezado institucional === */
-.encabezado {
+/*---------------------------    Start Header  ----------------------------------------------------------------------------------*/
+.header {
   background-color: #ffffff;
   padding: 1.5rem 3rem;
 }
+/*---------------------------    End Header  ----------------------------------------------------------------------------------*/
 
+/*---------------------------    Start Logos  ----------------------------------------------------------------------------------*/
 .logos {
   display: flex;
   align-items: center;
@@ -36,8 +40,9 @@ body {
   height: 60px;
   object-fit: contain;
 }
+/*---------------------------   End Logos ----------------------------------------------------------------------------------*/
 
-/* === Banner principal === */
+/*---------------------------   Start Banner  ----------------------------------------------------------------------------------*/
 .banner {
   position: relative;
   width: 100%;
@@ -54,8 +59,10 @@ body {
   height: auto;
   display: block;
 }
+/*---------------------------   End Banner ----------------------------------------------------------------------------------*/
 
-.titulo-banner {
+/*---------------------------   Start Titles  ----------------------------------------------------------------------------------*/
+.title-banner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,14 +75,23 @@ body {
   max-width: 90%;
 }
 
-.titulo-banner h1 {
+.title-banner h1 {
   margin: 0;
   font-size: 1.8rem;
   line-height: 1.4;
 }
+/*---------------------------  End Titles  ----------------------------------------------------------------------------------*/
 
-/* === Contenido principal === */
-.contenido {
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------   End Main  ------------------------------------------------------------------------*/
+/*=====================================================================================================================================================*/
+
+
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  Start Section 'Sobre el proyecto' ---------------------------------------------------*/
+/*=====================================================================================================================================================*/
+
+.content {
   max-width: 1340px;
   margin: 3rem auto;
   padding: 1.5rem;
@@ -84,19 +100,19 @@ body {
   border-radius: 8px;
 }
 
-.contenido h2 {
+.content h2 {
   font-size: 1.8rem;
   color: #0076CE;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
-.contenido h2:hover {
+.content h2:hover {
   text-decoration: underline;
   color: #0076CE;
 }
 
-.contenido p {
+.content p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -104,25 +120,33 @@ body {
 }
 
 /* === Enlaces dentro del texto === */
-.contenido a {
+.content a {
   color: #bd4e0c;
   text-decoration: none;
 }
 
-.contenido a:hover {
+.content a:hover {
   text-decoration: underline;
   color: #bd4e0c;
 }
 
-/* === Botones de cuenca === */
-.botones-cuencas {
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  End Section 'Sobre el proyecto' -----------------------------------------------------*/
+/*=====================================================================================================================================================*/
+
+
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  Start Section 'Área de estudio' -----------------------------------------------------*/
+/*=====================================================================================================================================================*/
+
+.buttom-information {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
 }
 
-.botones-cuencas .boton-cuenca {
+.buttom-information .buttom-info {
   display: inline-block;
   background-color: #ffffff;
   color: #000000;
@@ -138,15 +162,14 @@ body {
   background-size: 20px 20px;
 }
 
-.botones-cuencas .boton-cuenca:hover {
+.buttom-information .buttom-info:hover {
   background-color: #c8cacc;
   color: #ffffff;
 }
 
-/* Layout principal del panel */
-.balance-layout {
+.menu-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 250px 1fr;
   gap: 0;
   max-width: 1400px;
   margin: 3rem auto;
@@ -157,14 +180,13 @@ body {
   overflow: hidden;
 }
 
-/* Sidebar */
-.balance-sidebar {
+.menu-sidebar {
   background-color: #f6f7f8;
   border-right: 1px solid #ddd;
   padding: 1.25rem;
 }
 
-.sidebar-titulo {
+.sidebar-title {
   margin: 0 0 1rem 0;
   font-size: 1rem;
   font-weight: 700;
@@ -173,7 +195,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Botones de pestañas */
 .tab-btn {
   display: block;
   width: 100%;
@@ -201,12 +222,10 @@ body {
   border-color: #003f6b;
 }
 
-/* Contenido principal */
-.balance-contenido {
+.menu-content {
   padding: 1.5rem 1.75rem 2rem;
 }
 
-/* Paneles */
 .tab-panel {
   display: none;
 }
@@ -215,7 +234,6 @@ body {
   display: block;
 }
 
-/* Encabezado de panel */
 .panel-header h2 {
   margin: 0 0 0.75rem 0;
   font-size: 1.5rem;
@@ -223,17 +241,15 @@ body {
   font-weight: 700;
 }
 
-/* Cuerpo de panel: dos columnas en escritorio */
 .panel-body {
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 1.25rem;
   align-items: start;
 }
 
-/* Texto del panel */
-.panel-texto p {
-  font-size: 0.98rem;
+.panel-text p {
+  font-size: 0.90rem;
   line-height: 1.65;
   color: #333;
   text-align: justify;
@@ -243,8 +259,7 @@ body {
   padding: 1rem;
 }
 
-/* Mapa incrustado */
-.panel-mapa iframe {
+.panel-map iframe {
   width: 100%;
   height: 560px;
   border: 1px solid #ddd;
@@ -252,8 +267,7 @@ body {
   background-color: #fff;
 }
 
-/* Leyenda simple */
-.panel-leyenda {
+.panel-legend {
   margin-top: 0.5rem;
   display: flex;
   gap: 1rem;
@@ -263,43 +277,31 @@ body {
   color: #444;
 }
 
-.leyenda-item {
+.legend-item {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-.punto.azul {
+.point.blue {
   width: 10px; height: 10px; border-radius: 50%; background: #1d7cf2; display: inline-block;
 }
 
-.linea.negra {
+.point.black {
   width: 18px; height: 2px; background: #000; display: inline-block;
 }
 
-/* Responsivo */
-@media (max-width: 1024px) {
-  .panel-body {
-    grid-template-columns: 1fr;
-  }
-}
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  End Section 'Área de estudio' -------------------------------------------------------*/
+/*=====================================================================================================================================================*/
 
-@media (max-width: 768px) {
-  .balance-layout {
-    grid-template-columns: 1fr;
-  }
 
-  .balance-sidebar {
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  Start Section 'Información climática y biofísica' -----------------------------------*/
+/*=====================================================================================================================================================*/
 
-  .panel-mapa iframe {
-    height: 420px;
-  }
-}
 
-.panel-climatico {
+.panel-climate {
   display: grid;
   grid-template-columns: 280px 1fr;
   max-width: 1400px;
@@ -311,13 +313,13 @@ body {
   overflow: hidden;
 }
 
-.clima-sidebar {
+.climate-sidebar {
   background-color: #f6f7f8;
   border-right: 1px solid #ddd;
   padding: 1.5rem;
 }
 
-.clima-sidebar h3 {
+.climate-sidebar h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -325,7 +327,7 @@ body {
   text-transform: uppercase;
 }
 
-.clima-btn {
+.climate-btn {
   display: block;
   width: 100%;
   text-align: left;
@@ -340,83 +342,42 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.clima-btn:hover {
+.climate-btn:hover {
   background-color: #00904E;
   color: #fff;
 }
 
-.clima-btn.active {
+.climate-btn.active {
   background-color: #003f6b;
   color: #fff;
   border-color: #003f6b;
 }
 
-.clima-contenido {
+.climate-content {
   padding: 2rem;
 }
 
-.mapa-climatico iframe {
+.map-climate iframe {
   width: 100%;
   height: 600px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-.leyenda-clima {
+.legend-climate {
   margin-top: 1rem;
   font-size: 0.95rem;
   color: #444;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .panel-climatico {
-    grid-template-columns: 1fr;
-  }
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  End Section 'Información climática y biofísica' -------------------------------------*/
+/*=====================================================================================================================================================*/
 
-  .clima-sidebar {
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
 
-  .mapa-climatico iframe {
-    height: 420px;
-  }
-}
-
-/* === Responsivo para tablet y móvil === */
-@media (max-width: 768px) {
-  .encabezado {
-    padding: 1rem;
-  }
-
-  .logos img {
-    height: 40px;
-  }
-
-  .titulo-banner h1 {
-    font-size: 1.6rem;
-  }
-
-  .contenido {
-    padding: 2rem 1rem;
-  }
-
-  .contenido h2 {
-    font-size: 1.4rem;
-  }
-
-  .contenido p {
-    font-size: 0.95rem;
-  }
-
-  .botones-cuencas .boton-cuenca {
-    font-size: 0.95rem;
-    padding-left: 2.5rem;
-    background-position: 8px center;
-    background-size: 18px 18px;
-  }
-}
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  Start Section 'Resultados' ----------------------------------------------------------*/
+/*=====================================================================================================================================================*/
 
 .panel-clima-expandido {
   max-width: 1350px;
@@ -483,13 +444,9 @@ body {
   border: 1px solid #ccc;
 }
 
-/* Responsivo */
-@media (max-width: 1024px) {
-  .clima-panel {
-    grid-template-columns: 1fr;
-  }
+/*=====================================================================================================================================================*/
+/*--------------------------------------------------------------  End Section 'Resultados' ------------------------------------------------------------*/
+/*=====================================================================================================================================================*/
 
-  .clima-mapa iframe {
-    height: 420px;
-  }
-}
+
+
