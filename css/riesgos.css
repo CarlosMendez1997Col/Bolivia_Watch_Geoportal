@@ -118,7 +118,6 @@ body {
   text-align: justify;
 }
 
-/* === Enlaces dentro del texto === */
 .content a {
   color: #bd4e0c;
   text-decoration: none;
@@ -153,25 +152,25 @@ body {
   gap: 2rem;
 }
 
-.enso-izquierda {
+.enso-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.enso-simbologia h3 {
+.enso-symbols h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.enso-simbologia ul {
+.enso-symbols ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.enso-simbologia li {
+.enso-symbols li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -188,7 +187,7 @@ body {
   display: inline-block;
 }
 
-.enso-botones {
+.enso-buttoms {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -217,13 +216,13 @@ body {
   border-color: #B54900;
 }
 
-.enso-imagen img {
+.enso-image img {
   width: 100%;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
-.enso-mapa iframe {
+.enso-map iframe {
   width: 100%;
   height: 600px;
   border-radius: 8px;
