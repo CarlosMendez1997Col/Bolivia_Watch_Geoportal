@@ -54,7 +54,7 @@
 </section>  
   <!---------------------------------------------End section 'Sobre el proyecto'------------------------------------------------------->
 
-
+<!---------------------------------------------Start section 'SST y ENSO' ------------------------------------------------------->
 <section class="contenido">
   <h2>Índices climáticos de Temperatura Superficial Oceánica (SST) y El Niño-Oscilación del Sur (ENSO)</h2>
     <p>
@@ -91,7 +91,11 @@
     </div>
   </section>
 </section>  
+ <!---------------------------------------------End section 'SST y ENSO'------------------------------------------------------->
 
+
+
+ <!---------------------------------------------Start script to update map 'SST y ENSO'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.enso-btn');
@@ -109,54 +113,47 @@
     });
   });
 </script>
+<!---------------------------------------------End script to update map 'SST y ENSO' ----------------------------------------------------->
 
 
 
-
-
-
-
+<!---------------------------------------------Start section 'Reporte sequia VIDECI' ------------------------------------------------------->
 <section class="contenido">
   <h2>Reporte de emergencia de sequía por municipio emitido por VIDECI [2002 - 2022]</h2>
 
-<section class="panel-sequia-mensual">
-  <div class="sequia-layout">
-    <!-- Botonera vertical -->
-    <aside class="sequia-meses">
-      <h3>Frecuencia mensual de emergencia</h3>
-      <button class="mes-btn active" data-mes="enero">Enero</button>
-      <button class="mes-btn" data-mes="febrero">Febrero</button>
-      <button class="mes-btn" data-mes="marzo">Marzo</button>
-      <button class="mes-btn" data-mes="abril">Abril</button>
-      <button class="mes-btn" data-mes="mayo">Mayo</button>
-      <button class="mes-btn" data-mes="junio">Junio</button>
-      <button class="mes-btn" data-mes="julio">Julio</button>
-      <button class="mes-btn" data-mes="agosto">Agosto</button>
-      <button class="mes-btn" data-mes="septiembre">Septiembre</button>
-      <button class="mes-btn" data-mes="octubre">Octubre</button>
-      <button class="mes-btn" data-mes="noviembre">Noviembre</button>
-      <button class="mes-btn" data-mes="diciembre">Diciembre</button>
-    </aside>
-
-    <!-- Mapa dinámico -->
-    <div class="sequia-mapa">
-      <iframe id="mapa-sequia" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=enero" frameborder="0" loading="lazy"></iframe>
+  <section class="panel-sequia-mensual">
+    <div class="sequia-layout">
+      <!-- Botonera vertical -->
+      <aside class="sequia-meses">
+        <h3>Frecuencia mensual de emergencia</h3>
+        <button class="mes-btn active" data-mes="enero">Enero</button>
+        <button class="mes-btn" data-mes="febrero">Febrero</button>
+        <button class="mes-btn" data-mes="marzo">Marzo</button>
+        <button class="mes-btn" data-mes="abril">Abril</button>
+        <button class="mes-btn" data-mes="mayo">Mayo</button>
+        <button class="mes-btn" data-mes="junio">Junio</button>
+        <button class="mes-btn" data-mes="julio">Julio</button>
+        <button class="mes-btn" data-mes="agosto">Agosto</button>
+        <button class="mes-btn" data-mes="septiembre">Septiembre</button>
+        <button class="mes-btn" data-mes="octubre">Octubre</button>
+        <button class="mes-btn" data-mes="noviembre">Noviembre</button>
+        <button class="mes-btn" data-mes="diciembre">Diciembre</button>
+      </aside>
+      <div class="sequia-mapa">
+        <iframe id="mapa-sequia" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=enero" frameborder="0" loading="lazy"></iframe>
+      </div>
     </div>
-  </div>
+  </section>
 </section>
-</section>
+<!---------------------------------------------End section 'Reporte sequia VIDECI' ------------------------------------------------------->
 
 
 
-
-
-
-
+<!---------------------------------------------Start script to update map 'Reporte sequia VIDECI'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.mes-btn');
     const mapa = document.getElementById('mapa-sequia');
-
     const urls = {
       enero: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=enero',
       febrero: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=febrero',
@@ -175,51 +172,48 @@
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
+          btn.classList.add('active');
         const mes = btn.dataset.mes;
         mapa.src = urls[mes];
       });
     });
   });
 </script>
+<!---------------------------------------------End script to update map 'Reporte sequia VIDECI'----------------------------------------------------->
 
 
 
-
-
+<!---------------------------------------------Start section 'Sequia SPI' ------------------------------------------------------->
 <section class="contenido">
   <h2>Eventos de sequía meteorológica [SPI]</h2>
-
-<section class="panel-sequia-spei">
-  <div class="spei-layout">
-    <!-- Panel izquierdo: controles + mensaje -->
-    <aside class="spei-controles">
-      <div class="spei-navegacion">
-        <button id="spei-prev">⟨</button>
-        <button id="spei-next">⟩</button>
+    <section class="panel-sequia-spei">
+      <div class="spei-layout">
+        <aside class="spei-controles">
+          <div class="spei-navegacion">
+            <button id="spei-prev">⟨</button>
+            <button id="spei-next">⟩</button>
+          </div>
+          <div class="spei-mensaje" id="spei-mensaje">
+            <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
+          </div>
+        </aside>
+        <div class="spei-mapa">
+          <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
+        </div>
       </div>
-      <div class="spei-mensaje" id="spei-mensaje">
-        <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
-      </div>
-    </aside>
-
-    <!-- Panel derecho: mapa -->
-    <div class="spei-mapa">
-      <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
-    </div>
-  </div>
+    </section>
 </section>
-</section>
+<!---------------------------------------------End section 'Sequia SPI' ------------------------------------------------------->
 
 
+
+<!---------------------------------------------Start script to update map 'Reporte sequia SPI'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const speiMapa = document.getElementById('spei-mapa');
     const speiMensaje = document.getElementById('spei-mensaje');
     const speiBtnPrev = document.getElementById('spei-prev');
     const speiBtnNext = document.getElementById('spei-next');
-
     const speiCapas = [
       {
         url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1',
@@ -242,41 +236,31 @@
         texto: 'Visualizando categoría 5: Eventos entre 419 y 480.'
       }
     ];
-
     let speiIndice = 0;
-
     const actualizarSpeiPanel = () => {
       speiMapa.src = speiCapas[speiIndice].url;
       speiMensaje.innerHTML = `<p>${speiCapas[speiIndice].texto}</p>`;
     };
-
     speiBtnPrev.addEventListener('click', () => {
       speiIndice = (speiIndice - 1 + speiCapas.length) % speiCapas.length;
       actualizarSpeiPanel();
     });
-
     speiBtnNext.addEventListener('click', () => {
       speiIndice = (speiIndice + 1) % speiCapas.length;
       actualizarSpeiPanel();
     });
-
     actualizarSpeiPanel();
   });
 </script>
+<!---------------------------------------------End script to update map 'Reporte sequia SPI'----------------------------------------------------->
 
 
 
-
-
-
-
-
+<!---------------------------------------------Start section 'Sequia SPEI' ------------------------------------------------------->
 <section class="contenido">
   <h2>Eventos de sequía agrometeorológica [SPEI]</h2>
-
 <section class="panel-sequia-spei">
   <div class="spei-layout">
-    <!-- Panel izquierdo: controles + mensaje -->
     <aside class="spei-controles">
       <div class="spei-navegacion">
         <button id="spei-prev">⟨</button>
@@ -286,22 +270,22 @@
         <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
       </div>
     </aside>
-
-    <!-- Panel derecho: mapa -->
     <div class="spei-mapa">
       <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
     </div>
   </div>
 </section>
 </section>
+<!---------------------------------------------End section 'Sequia SPEI' ------------------------------------------------------->
 
+
+<!---------------------------------------------Start script to update map 'Reporte sequia SPEI'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const speiMapa = document.getElementById('spei-mapa');
     const speiMensaje = document.getElementById('spei-mensaje');
     const speiBtnPrev = document.getElementById('spei-prev');
     const speiBtnNext = document.getElementById('spei-next');
-
     const speiCapas = [
       {
         url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1',
@@ -324,37 +308,31 @@
         texto: 'Visualizando categoría 5: Eventos entre 419 y 480.'
       }
     ];
-
     let speiIndice = 0;
-
     const actualizarSpeiPanel = () => {
       speiMapa.src = speiCapas[speiIndice].url;
       speiMensaje.innerHTML = `<p>${speiCapas[speiIndice].texto}</p>`;
     };
-
     speiBtnPrev.addEventListener('click', () => {
       speiIndice = (speiIndice - 1 + speiCapas.length) % speiCapas.length;
       actualizarSpeiPanel();
     });
-
     speiBtnNext.addEventListener('click', () => {
       speiIndice = (speiIndice + 1) % speiCapas.length;
       actualizarSpeiPanel();
     });
-
     actualizarSpeiPanel();
   });
 </script>
+<!---------------------------------------------End script to update map 'Reporte sequia SPEI'----------------------------------------------------->
 
 
 
-
+<!---------------------------------------------Start section 'Sequia Combinado' ------------------------------------------------------->
 <section class="contenido">
   <h2>índice Combinado de sequía</h2>
-
 <section class="panel-sequia-spei">
   <div class="spei-layout">
-    <!-- Panel izquierdo: controles + mensaje -->
     <aside class="spei-controles">
       <div class="spei-navegacion">
         <button id="spei-prev">⟨</button>
@@ -364,22 +342,22 @@
         <p>Visualizando categoría 1: Total de eventos entre 390 y 396.</p>
       </div>
     </aside>
-
-    <!-- Panel derecho: mapa -->
     <div class="spei-mapa">
       <iframe id="spei-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1" frameborder="0" loading="lazy"></iframe>
     </div>
   </div>
 </section>
 </section>
+<!---------------------------------------------End section 'Sequia Combinado' ------------------------------------------------------->
 
+
+<!---------------------------------------------Start script to update map 'Reporte sequia Combinado'----------------------------------------------------->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const speiMapa = document.getElementById('spei-mapa');
     const speiMensaje = document.getElementById('spei-mensaje');
     const speiBtnPrev = document.getElementById('spei-prev');
     const speiBtnNext = document.getElementById('spei-next');
-
     const speiCapas = [
       {
         url: 'https://www.arcgis.com/apps/mapviewer/index.html?layers=spei1',
@@ -402,27 +380,24 @@
         texto: 'Visualizando categoría 5: Eventos entre 419 y 480.'
       }
     ];
-
     let speiIndice = 0;
-
     const actualizarSpeiPanel = () => {
       speiMapa.src = speiCapas[speiIndice].url;
       speiMensaje.innerHTML = `<p>${speiCapas[speiIndice].texto}</p>`;
     };
-
     speiBtnPrev.addEventListener('click', () => {
       speiIndice = (speiIndice - 1 + speiCapas.length) % speiCapas.length;
       actualizarSpeiPanel();
     });
-
     speiBtnNext.addEventListener('click', () => {
       speiIndice = (speiIndice + 1) % speiCapas.length;
       actualizarSpeiPanel();
     });
-
     actualizarSpeiPanel();
   });
 </script>
+<!---------------------------------------------End script to update map 'Reporte sequia Combinado'----------------------------------------------------->
+
 
 </body>
 </html>
