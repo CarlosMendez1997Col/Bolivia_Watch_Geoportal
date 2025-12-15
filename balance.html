@@ -266,27 +266,24 @@
 <!---------------------------------------------Start section 'Resultados'------------------------------------------------------->
 <section class="content">
   <h2>Resultados</h2>
-  <section class="panel-clima-expandido">
-    <!-- Botonera horizontal -->
-    <nav class="clima-tabs">
-      <button class="clima-tab active" data-var="precipitacion">Precipitación</button>
-      <button class="clima-tab" data-var="evapotranspiracion">Evapotranspiración</button>
-      <button class="clima-tab" data-var="escorrentia">Escorrentía</button>
-      <button class="clima-tab" data-var="caudal">Caudal específico</button>
-      <button class="clima-tab" data-var="aridez">Índice de aridez</button>
-      <button class="clima-tab" data-var="caudales">Caudales</button>
-      <button class="clima-tab" data-var="balance">Balance mensual</button>
+  <section class="panel-climatevar-extent">
+    <nav class="climatevar-tabs">
+      <button class="climatevar-tab active" data-var="precipitacion">Precipitación</button>
+      <button class="climatevar-tab" data-var="evapotranspiracion">Evapotranspiración</button>
+      <button class="climatevar-tab" data-var="escorrentia">Escorrentía</button>
+      <button class="climatevar-tab" data-var="caudal">Caudal específico</button>
+      <button class="climatevar-tab" data-var="aridez">Índice de aridez</button>
+      <button class="climatevar-tab" data-var="caudales">Caudales</button>
+      <button class="climatevar-tab" data-var="balance">Balance mensual</button>
     </nav>
-
-    <!-- Contenedor dinámico -->
-    <div class="clima-panel">
-      <div class="clima-texto" id="clima-texto">
+    <div class="climatevar-panel">
+      <div class="climatevar-text" id="climatevar-text">
         <p>
           La precipitación anual varía significativamente en Bolivia, con máximos en la Amazonía y mínimos en el Altiplano. Esta variable es clave para entender la disponibilidad hídrica y el comportamiento de las cuencas.
         </p>
       </div>
-      <div class="clima-mapa">
-        <iframe id="clima-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=precipitacion" frameborder="0" loading="lazy"></iframe>
+      <div class="climatevar-mapa">
+        <iframe id="climatevar-mapa" src="https://www.arcgis.com/apps/mapviewer/index.html?layers=precipitacion" frameborder="0" loading="lazy"></iframe>
       </div>
     </div>
   </section>
