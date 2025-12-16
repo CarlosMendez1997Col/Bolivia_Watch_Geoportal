@@ -62,9 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { layer: "bw_limite_nacional_bwii_bh_ia", nombre: "Límite Nacional", estilo: "limite_nacional" },
     { layer: "bw_lago_bwii_bh_ia", nombre: "Lagos", estilo: "lago" },
     { layer: "bw_limites_internacionales_bwii_clima_bh", nombre: "Límites Internacionales", estilo: "limites_internacionales" },
-    { layer: "bw_rios_bwii_bh_ia", nombre: "Ríos", estilo: "rios" },
-    { layer: "bw_calibracion_bwii_bh_ia", nombre: "Calibración", estilo: "calibracion" },
-    { layer: "bw_macrocuencas_bwii_bh_ia", nombre: "Macrocuencas", estilo: "macrocuencas" }
+    { layer: "bw_rios_bwii_bh_ia", nombre: "Ríos", estilo: "rios" }
   ];
 
   // Contenedor de la leyenda
