@@ -80,12 +80,12 @@
         </aside>
 
     <!---------------------------------------------Start first class 'El área de estudio'------------------------------------------------------->
-    <main class="menu-content">
-      <section class="tab-panel active" id="panel-estudio">
-            <div class="panel-header">
-              <h2>El área de estudio</h2>
-            </div>
-        <div class="panel-body">
+      <main class="menu-content">
+        <section class="tab-panel active" id="panel-estudio">
+          <div class="panel-header">
+            <h2>El área de estudio</h2>
+          </div>
+          <div class="panel-body">
             <div class="panel-text">
               <p>
                 La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
@@ -94,15 +94,13 @@
                 de Bolivia
               </p>
             </div>
-          <div class="panel-map">
-                  <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center= -63,-16&level=5" frameborder="0" loading="lazy"></iframe>
-            <div class="panel-legend">
-                  <span class="legend-item"><span class="point blue"></span> Capital municipal</span>
-                  <span class="legend-item"><span class="point black"></span> Límite municipal</span>
+            <div class="panel-map">
+              <div 
+                  id="map-estudio">
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     <!---------------------------------------------End first class 'El área de estudio'------------------------------------------------------->
       
       <!---------------------------------------------Start second class 'Unidades Hidrográficas'------------------------------------------------------->
@@ -120,7 +118,9 @@
               </p>
             </div>
             <div class="panel-map">
-              <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-16&level=5" frameborder="0" loading="lazy"></iframe>
+              <div 
+                  id="map-unidades">
+              </div>              
             </div>
           </div>
         </section>
@@ -141,7 +141,9 @@
                 </p>
               </div>
               <div class="panel-map">
-                <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-67,-19&level=6" frameborder="0" loading="lazy"></iframe>
+                <div 
+                    id="map-endorreica">
+                </div>              
               </div>
             </div>
           </section>
@@ -160,7 +162,9 @@
                       </p>
                     </div>
                         <div class="panel-map">
-                          <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-60,-19&level=6"frameborder="0" loading="lazy"></iframe>
+                          <div 
+                              id="map-plata">
+                          </div>
                         </div>
                   </div>
               </section>
@@ -179,7 +183,9 @@
                               </p>
                             </div>
                             <div class="panel-map">
-                              <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?layers=&center=-63,-13&level=6"frameborder="0" loading="lazy"></iframe>
+                              <div 
+                                  id="map-amazonas">
+                              </div>
                             </div>
                           </div>
                       </section>
@@ -191,19 +197,21 @@
 
 
 <!---------------------------------------------Start script to update map 'Área de estudio'----------------------------------------------------->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
-    const showPanel = (tab) => {
-                                buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === tab)); // buttoms
-                                panels.forEach(panel => panel.classList.toggle('active', panel.id === `panel-${tab}`));// panels
-                                };
-    buttons.forEach(btn => {btn.addEventListener('click', () => showPanel(btn.dataset.tab));
-                            });
-    showPanel('estudio');// Set initial window “El área de estudio”
-  });
-</script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/balance.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const map = L.map("map-estudio", {
+        center: [-17, -64],
+        zoom: 6,
+        layers: [osm]
+      });
+      const control = L.control.layers(baseMaps, {}, { collapsed: false }).addTo(map);
+      L.control.scale().addTo(map);
+      cargarCapasBalance(map, control);
+    });
+  </script>
+
 <!---------------------------------------------End script to update map 'Área de estudio' ----------------------------------------------------->
 
 
@@ -343,7 +351,6 @@
   });
 </script>
 <!---------------------------------------------End script to update map 'Resultados'----------------------------------------------------->
-
 
 </body>
 </html>
