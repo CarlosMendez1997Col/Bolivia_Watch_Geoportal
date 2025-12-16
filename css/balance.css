@@ -177,7 +177,7 @@ body {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 14px rgba(0,0,0,0.06);
-  overflow: hidden;
+  overflow: visible; /* corregido */
 }
 
 .menu-sidebar {
@@ -259,19 +259,13 @@ body {
   padding: 1rem;
 }
 
-.panel-map iframe {
-  width: 100%;
-  height: 560px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
 .panel-map {
   position: relative;
+  min-height: 560px; /* asegura espacio para el mapa */
+  overflow: visible;
 }
 
-#map-estudio {
+.panel-map iframe {
   width: 100%;
   height: 560px;
   border: 1px solid #ddd;
@@ -295,14 +289,22 @@ body {
   gap: 0.35rem;
 }
 
-.point.blue { width: 10px; height: 10px; border-radius: 50%; background: #1d7cf2; display: inline-block; }
-.point.black { width: 18px; height: 2px; background: #000; display: inline-block; }
-.point.green { width: 10px; height: 10px; border-radius: 50%; background: #00904E; display: inline-block; }
-.point.red { width: 10px; height: 10px; border-radius: 50%; background: #ff0000; display: inline-block; }
-.point.cyan { width: 10px; height: 10px; border-radius: 50%; background: #1ca9f4; display: inline-block; }
-.point.orange { width: 10px; height: 10px; border-radius: 50%; background: #ff9900; display: inline-block; }
-.point.purple { width: 10px; height: 10px; border-radius: 50%; background: #6a0dad; display: inline-block; }
+.point.blue {
+  width: 10px; height: 10px; border-radius: 50%; background: #1d7cf2; display: inline-block;
+}
 
+.point.black {
+  width: 18px; height: 2px; background: #000; display: inline-block;
+}
+
+#map-estudio {
+  width: 100%;
+  height: 560px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box; /* corregido */
+}
 
 /*=====================================================================================================================================================*/
 /*--------------------------------------------------------------  End Section 'Área de estudio' -------------------------------------------------------*/

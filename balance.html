@@ -15,6 +15,7 @@
 <head>
   <meta charset="UTF-8">
     <link rel="stylesheet" href="css/balance.css"><!--******************************************* Reference with balance.css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 
 <!--------------------------------------------------------------   Start Body  ---------------------------------------------------------------------------------->
@@ -80,12 +81,12 @@
         </aside>
 
     <!---------------------------------------------Start first class 'El área de estudio'------------------------------------------------------->
-      <main class="menu-content">
-        <section class="tab-panel active" id="panel-estudio">
-          <div class="panel-header">
-            <h2>El área de estudio</h2>
-          </div>
-          <div class="panel-body">
+    <main class="menu-content">
+      <section class="tab-panel active" id="panel-estudio">
+            <div class="panel-header">
+              <h2>El área de estudio</h2>
+            </div>
+        <div class="panel-body">
             <div class="panel-text">
               <p>
                 La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
@@ -94,13 +95,15 @@
                 de Bolivia
               </p>
             </div>
-            <div class="panel-map">
-              <div 
-                  id="map-estudio">
-              </div>
+          <div class="panel-map">
+                  <div id="map-estudio"></div>
+            <div class="panel-legend">
+                  <span class="legend-item"><span class="point blue"></span> Capital municipal</span>
+                  <span class="legend-item"><span class="point black"></span> Límite municipal</span>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
     <!---------------------------------------------End first class 'El área de estudio'------------------------------------------------------->
       
       <!---------------------------------------------Start second class 'Unidades Hidrográficas'------------------------------------------------------->
@@ -197,20 +200,11 @@
 
 
 <!---------------------------------------------Start script to update map 'Área de estudio'----------------------------------------------------->
+
+  <!-- JS de Leaflet -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Tu script externo -->
   <script src="js/balance.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const map = L.map("map-estudio", {
-        center: [-17, -64],
-        zoom: 6,
-        layers: [osm]
-      });
-      const control = L.control.layers(baseMaps, {}, { collapsed: false }).addTo(map);
-      L.control.scale().addTo(map);
-      cargarCapasBalance(map, control);
-    });
-  </script>
 
 <!---------------------------------------------End script to update map 'Área de estudio' ----------------------------------------------------->
 
