@@ -1,9 +1,16 @@
-// Bolivia Watch Geoportal
-// THE STOCKHOLM ENVIRONMENT INSTITUTE (SEI)
-// Developed by MSc Carlos Mendez
+/*=====================================================================================================================================================*/
+/*=====                                                        Bolivia Watch Geoportal                                                            =====*/
+/*=====                                         Stockholm Environment Institute - Latin America (SEI-LA)                                          =====*/
+/*=====                                              Copyright 2025, Stockholm Environment Institute                                              =====*/
+/*=====                                            https://github.com/sei-latam/Bolivia_Watch_Geoportal                                           =====*/
+/*=====                                            https://sei-latam.github.io/Bolivia_Watch_Geoportal/                                           =====*/
+/*=====                                                                Index.js                                                                 =====*/
+/*=====                                          Geoportal Developed by Carlos Mendez - Research Associate I                                      =====*/
+/*=====                                                              Apache-2.0 license                                                           =====*/
+/*=====================================================================================================================================================*/
 
 // ==========================
-// 1. Mapas base
+// 1. Basemaps
 // ==========================
 
 const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -19,7 +26,7 @@ const esriTopo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/servic
 });
 
 // ==========================
-// 2. Inicialización del mapa
+// 2. Initialize Map
 // ==========================
 
 const map = L.map("map", {
