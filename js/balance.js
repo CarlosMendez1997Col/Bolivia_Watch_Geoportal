@@ -14,61 +14,92 @@ document.addEventListener('DOMContentLoaded', () => {
   const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors"
   });
+
   const esriSat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
     attribution: "© Esri & contributors"
   });
+
   const esriTopo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "© Esri & contributors"
+  });
+
+  // ✅ Nuevo mapa base: Esri Oceans
+  const esriOceans = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}", {
     attribution: "© Esri & contributors"
   });
 
   const baseMaps = {
     "OpenStreetMap": osm,
     "Satélite Esri": esriSat,
-    "Topográfico Esri": esriTopo
+    "Topográfico Esri": esriTopo,
+    "Océanos Esri": esriOceans   // agregado al control
   };
 
-  // Inicializar mapa
+  // Inicializar mapa con Oceans como base por defecto
   const map = L.map("map-estudio", {
     center: [-17, -64], // centro aproximado de Bolivia
     zoom: 6,
-    layers: [osm] // capa inicial
+    layers: [esriOceans]  // ✅ ahora inicia con Oceans
   });
 
-  // Control para alternar entre mapas base
+
+  // Control de capas
   const control = L.control.layers(baseMaps, {}, { collapsed: false }).addTo(map);
 
   // Escala
   L.control.scale().addTo(map);
 
-  // Forzar redibujo para que encaje en el contenedor
+  // Forzar redibujo
   setTimeout(() => map.invalidateSize(), 300);
 
-  // URL base del servicio WFS
-  const wfsUrl = "https://sei-latam-bw-watch-server.publicvm.com/geoserver/Bolivia_Watch/ows?";
+  // URL base WMS
+  const wmsUrl = "https://sei-latam-bw-watch-server.publicvm.com/geoserver/Bolivia_Watch/wms";
 
-  // Definición de las 8 capas
+  // Definición de las capas WMS con sus estilos en GeoServer
   const capas = [
-    { typeName: "bw_capital_municipal_bwii_bh_ia", nombre: "Capital Municipal", estilo: { color: "#B54900" } },
-    { typeName: "bw_limite_municipal_bwii_clima_bh", nombre: "Límite Municipal", estilo: { color: "#1d7cf2", weight: 1, fillOpacity: 0 } },
-    { typeName: "bw_limite_nacional_bwii_bh_ia", nombre: "Límite Nacional", estilo: { color: "#000", weight: 2, fillOpacity: 0 } },
-    { typeName: "bw_lago_bwii_bh_ia", nombre: "Lagos", estilo: { color: "#00904E", weight: 1, fillColor: "#00904E", fillOpacity: 0.5 } },
-    { typeName: "bw_limites_internacionales_bwii_clima_bh", nombre: "Límites Internacionales", estilo: { color: "#ff0000", weight: 2, fillOpacity: 0 } },
-    { typeName: "bw_rios_bwii_bh_ia", nombre: "Ríos", estilo: { color: "#1ca9f4", weight: 1 } },
-    { typeName: "bw_calibracion_bwii_bh_ia", nombre: "Calibración", estilo: { color: "#ff9900", weight: 2 } },
-    { typeName: "bw_macrocuencas_bwii_bh_ia", nombre: "Macrocuencas", estilo: { color: "#6a0dad", weight: 2, fillOpacity: 0.2 } }
+    { layer: "bw_capital_municipal_bwii_bh_ia", nombre: "Capital Municipal", estilo: "capital_municipal" },
+    { layer: "bw_limite_municipal_bwii_clima_bh", nombre: "Límite Municipal", estilo: "limite_municipal" },
+    { layer: "bw_limite_nacional_bwii_bh_ia", nombre: "Límite Nacional", estilo: "limite_nacional" },
+    { layer: "bw_lago_bwii_bh_ia", nombre: "Lagos", estilo: "lago" },
+    { layer: "bw_limites_internacionales_bwii_clima_bh", nombre: "Límites Internacionales", estilo: "limites_internacionales" },
+    { layer: "bw_rios_bwii_bh_ia", nombre: "Ríos", estilo: "rios" },
+    { layer: "bw_calibracion_bwii_bh_ia", nombre: "Calibración", estilo: "calibracion" },
+    { layer: "bw_macrocuencas_bwii_bh_ia", nombre: "Macrocuencas", estilo: "macrocuencas" }
   ];
 
-  // Función para cargar las capas WFS
-  capas.forEach(({ typeName, nombre, estilo }) => {
-    const url = `${wfsUrl}service=WFS&version=1.0.0&request=GetFeature&typeName=Bolivia_Watch:${typeName}&srsName=EPSG:4326&outputFormat=application/json`;
+  // Contenedor de la leyenda
+  const legendDiv = document.getElementById("legend");
 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        const capa = L.geoJSON(data, { style: estilo });
-        capa.addTo(map);
-        control.addOverlay(capa, nombre);
-      })
-      .catch(err => console.error(`Error cargando capa ${nombre}:`, err));
+  capas.forEach(({ layer, nombre, estilo }) => {
+    const capa = L.tileLayer.wms(wmsUrl, {
+      layers: `Bolivia_Watch:${layer}`,
+      styles: estilo,
+      format: "image/png",
+      transparent: true   // ✅ ahora las capas son transparentes
+    });
+
+    control.addOverlay(capa, nombre);
+
+    // Evento: cuando se activa la capa, se añade su leyenda
+    map.on("overlayadd", e => {
+      if (e.layer === capa) {
+        const item = document.createElement("div");
+        item.className = "legend-item";
+        item.id = `legend-${layer}`;
+        item.innerHTML = `
+          <img src="${wmsUrl}?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&LAYER=Bolivia_Watch:${layer}&STYLE=${estilo}" alt="${nombre}">
+          ${nombre}
+        `;
+        legendDiv.appendChild(item);
+      }
+    });
+
+    // Evento: cuando se desactiva la capa, se elimina su leyenda
+    map.on("overlayremove", e => {
+      if (e.layer === capa) {
+        const item = document.getElementById(`legend-${layer}`);
+        if (item) legendDiv.removeChild(item);
+      }
+    });
   });
 });

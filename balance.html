@@ -16,6 +16,34 @@
   <meta charset="UTF-8">
     <link rel="stylesheet" href="css/balance.css"><!--******************************************* Reference with balance.css -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+    /* Estilo para la leyenda */
+    #legend {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 12px;
+      line-height: 1.4em;
+      max-height: 250px;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+    #legend h3 {
+      margin: 0 0 5px 0;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    #legend .legend-item {
+      margin-bottom: 8px;
+    }
+    #legend img {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  </style>
 </head>
 
 <!--------------------------------------------------------------   Start Body  ---------------------------------------------------------------------------------->
@@ -83,23 +111,24 @@
     <!---------------------------------------------Start first class 'El área de estudio'------------------------------------------------------->
     <main class="menu-content">
       <section class="tab-panel active" id="panel-estudio">
-            <div class="panel-header">
-              <h2>El área de estudio</h2>
-            </div>
+        <div class="panel-header">
+          <h2>El área de estudio</h2>
+        </div>
         <div class="panel-body">
-            <div class="panel-text">
-              <p>
-                La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas) 
-                y el límite político del país. De forma oficial el continente sudamericano está constituido en el nivel 1 [método Pfafstetter de 1989], por 10 unidades o regiones 
-                hidrográficas de las cuales, las regiones 0 [Región Endorreica], 4 [Región del Amazonas] y 8 [Región del Plata] del nivel 1 cuentan con superficie en territorio 
-                de Bolivia
-              </p>
-            </div>
-          <div class="panel-map">
-                  <div id="map-estudio"></div>
-            <div class="panel-legend">
-                  <span class="legend-item"><span class="point blue"></span> Capital municipal</span>
-                  <span class="legend-item"><span class="point black"></span> Límite municipal</span>
+          <div class="panel-text">
+            <p>
+              La representación del balance hídrico a nivel nacional implica un desafío por la no coincidencia del límite hidrográfico de las diferentes zonas de aporte (cuencas)
+              y el límite político del país. De forma oficial el continente sudamericano está constituido en el nivel 1 [método Pfafstetter de 1989], por 10 unidades o regiones
+              hidrográficas de las cuales, las regiones 0 [Región Endorreica], 4 [Región del Amazonas] y 8 [Región del Plata] del nivel 1 cuentan con superficie en territorio
+              de Bolivia
+            </p>
+          </div>
+          <div class="panel-map" style="position:relative;">
+            <div id="map-estudio" style="height:600px;"></div>
+            <!-- Panel de leyenda dinámico -->
+            <div id="legend" class="panel-legend">
+              <h3>Leyenda</h3>
+              <!-- Las leyendas se insertan dinámicamente desde balance.js -->
             </div>
           </div>
         </div>
